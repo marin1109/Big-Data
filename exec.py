@@ -5,10 +5,10 @@ spark = SparkSession.builder.appName("Football_Data_Analysis").getOrCreate()
 chemin_datasets = "datasets/"
 
 csv_files = [
-    "appearance.csv",
+    "appearances.csv",
     "club_games.csv",
     "clubs.csv",
-    "competition.csv",
+    "competitions.csv",
     "game_events.csv",
     "game_lineups.csv",
     "games.csv",
