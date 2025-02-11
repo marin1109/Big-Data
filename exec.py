@@ -1,4 +1,5 @@
 from pyspark.sql import SparkSession
+from pyspark.sql.functions import col, current_date, datediff
 
 spark = SparkSession.builder.appName("Football_Data_Analysis").getOrCreate()
 
@@ -56,7 +57,16 @@ spark.sql("""
 """).show()
 
 print("\n💾 Sauvegarde des joueurs âgés de plus de 30 ans dans un fichier CSV...")
+
+players_with_age = dataframes["players"].withColumn("age", (datediff(current_date(), col("date_of_birth")) / 365.25).cast("int"))
+
+players_with_age.createOrReplaceTempView("players")
+
 joueurs_30_plus = spark.sql("SELECT * FROM players WHERE age > 30")
-joueurs_30_plus.write.csv(f"{chemin_datasets}joueurs_30_plus.csv", header=True)
+
+chemin_sauvegarde = "/home/marin/M1/Big-Data/datasets/joueurs_30_plus.csv"
+joueurs_30_plus.write.csv(chemin_sauvegarde, header=True)
+
+print(f"\n✅ Fichier sauvegardé : {chemin_sauvegarde}")
 
 print("\n✅ Script terminé avec succès ! 🚀")
