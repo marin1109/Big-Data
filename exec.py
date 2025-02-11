@@ -31,16 +31,16 @@ for file in csv_files:
 for name, df in dataframes.items():
     df.createOrReplaceTempView(name)
 
-print("\n📌 Tables disponibles dans SparkSQL :")
+print("\nTables disponibles dans SparkSQL :")
 spark.sql("SHOW TABLES").show()
 
-print("\n🔎 Top 10 joueurs enregistrés :")
+print("\nTop 10 joueurs enregistrés :")
 spark.sql("SELECT * FROM players LIMIT 10").show()
 
-print("\n📊 Nombre total de joueurs :")
+print("\nNombre total de joueurs :")
 spark.sql("SELECT COUNT(*) AS total_joueurs FROM players").show()
 
-print("\n⚽ Clubs avec le plus de joueurs :")
+print("\nClubs avec le plus de joueurs :")
 spark.sql("""
     SELECT club_name, COUNT(*) AS nombre_joueurs
     FROM clubs
@@ -49,14 +49,14 @@ spark.sql("""
     LIMIT 10
 """).show()
 
-print("\n💰 Dernières transactions de joueurs :")
+print("\nDernières transactions de joueurs :")
 spark.sql("""
     SELECT * FROM transfers
     ORDER BY transfer_date DESC
     LIMIT 5
 """).show()
 
-print("\n💾 Sauvegarde des joueurs âgés de plus de 30 ans dans un fichier CSV...")
+print("\nSauvegarde des joueurs âgés de plus de 30 ans dans un fichier CSV...")
 
 players_with_age = dataframes["players"].withColumn("age", (datediff(current_date(), col("date_of_birth")) / 365.25).cast("int"))
 
@@ -67,6 +67,6 @@ joueurs_30_plus = spark.sql("SELECT * FROM players WHERE age > 30")
 chemin_sauvegarde = "/home/marin/M1/Big-Data/datasets/joueurs_30_plus.csv"
 joueurs_30_plus.write.csv(chemin_sauvegarde, header=True)
 
-print(f"\n✅ Fichier sauvegardé : {chemin_sauvegarde}")
+print(f"\nFichier sauvegardé : {chemin_sauvegarde}")
 
-print("\n✅ Script terminé avec succès ! 🚀")
+print("\nScript terminé avec succès !")
