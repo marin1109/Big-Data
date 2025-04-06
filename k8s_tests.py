@@ -4,19 +4,19 @@ import time
 from time import sleep
 
 # =============================================================================
-# Configuration de la SparkSession pour le mode Standalone
+# Configuration de la SparkSession pour Kubernetes
 # =============================================================================
 spark = SparkSession.builder \
-    .appName("StandaloneTests") \
-    .master("spark://marin-ZenBook-UX325EA-UX325EA:7077") \
+    .appName("K8sTests") \
     .config("spark.driver.memory", "8g") \
     .config("spark.executor.memory", "4g") \
     .getOrCreate()
 
 # =============================================================================
-# Chemin local (ex. répertoire ./datasets/) - adaptateur pour votre machine
+# Chemin local dans le conteneur (ex: file:///app/datasets/)
+# à adapter selon votre Dockerfile / volume monté
 # =============================================================================
-csv_path = "./datasets/"
+csv_path = "file:///app/datasets/"
 
 # =============================================================================
 # Chargement des DataFrames
@@ -36,16 +36,14 @@ games_df = spark.read.option("header", "true") \
 # =============================================================================
 # Partitionnement identique (8 partitions)
 # =============================================================================
-# - appearances et valuations partitionnés sur player_id (pour la jointure)
-# - games partitionné sur la colonne date (pour la requête de filtrage)
 appearances_df = appearances_df.repartition(8, "player_id").cache()
 player_valuations_df = player_valuations_df.repartition(8, "player_id").cache()
 games_df = games_df.repartition(8, "date").cache()
 
 # =============================================================================
-# Requête 1 : Agrégation (Top 10 joueurs par nombre total de buts)
+# Requête 1 : Agrégation
 # =============================================================================
-print("=== Début Requête 1 (Standalone) ===")
+print("=== Début Requête 1 (K8s) ===")
 start_time = time.time()
 
 result1 = (appearances_df
@@ -55,15 +53,15 @@ result1 = (appearances_df
            .limit(10))
 
 result1.show()
-print("Temps d'exécution Requête 1 (Standalone) :",
+print("Temps d'exécution Requête 1 (K8s) :",
       time.time() - start_time, "secondes")
 print("=== Fin Requête 1 ===\n")
 sleep(5)
 
 # =============================================================================
-# Requête 2 : Jointure (appearances x player_valuations)
+# Requête 2 : Jointure
 # =============================================================================
-print("=== Début Requête 2 (Standalone) ===")
+print("=== Début Requête 2 (K8s) ===")
 start_time = time.time()
 
 result2 = (
@@ -80,32 +78,30 @@ result2 = (
     )
 )
 
-# Pour forcer le calcul complet, on fait un count() avant le show()
 total_joined = result2.count()
 print("Nombre total de lignes jointes =", total_joined)
 result2.show(10)
 
-print("Temps d'exécution Requête 2 (Standalone) :",
+print("Temps d'exécution Requête 2 (K8s) :",
       time.time() - start_time, "secondes")
 print("=== Fin Requête 2 ===\n")
 sleep(5)
 
 # =============================================================================
-# Requête 3 : Filtrage (matchs après 2020, total buts >= 3)
+# Requête 3 : Filtrage
 # =============================================================================
-print("=== Début Requête 3 (Standalone) ===")
+print("=== Début Requête 3 (K8s) ===")
 start_time = time.time()
 
 result3 = games_df.filter(
     (col("date") > "2020-01-01") &
     ((col("home_club_goals") + col("away_club_goals")) >= 3)
 )
-
 count_filtered = result3.count()
 print("Nombre de matchs filtrés =", count_filtered)
 result3.show(10)
 
-print("Temps d'exécution Requête 3 (Standalone) :",
+print("Temps d'exécution Requête 3 (K8s) :",
       time.time() - start_time, "secondes")
 print("=== Fin Requête 3 ===\n")
 sleep(5)
