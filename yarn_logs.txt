@@ -1,0 +1,735 @@
+25/03/20 13:00:40 INFO SparkContext: Running Spark version 3.5.4
+25/03/20 13:00:40 INFO SparkContext: OS info Linux, 6.11.0-19-generic, amd64
+25/03/20 13:00:40 INFO SparkContext: Java version 11.0.26
+25/03/20 13:00:40 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+25/03/20 13:00:40 INFO ResourceUtils: ==============================================================
+25/03/20 13:00:40 INFO ResourceUtils: No custom resources configured for spark.driver.
+25/03/20 13:00:40 INFO ResourceUtils: ==============================================================
+25/03/20 13:00:40 INFO SparkContext: Submitted application: YarnTests
+25/03/20 13:00:40 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 2, script: , vendor: , memory -> name: memory, amount: 4096, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+25/03/20 13:00:40 INFO ResourceProfile: Limiting resource is cpus at 2 tasks per executor
+25/03/20 13:00:40 INFO ResourceProfileManager: Added ResourceProfile id: 0
+25/03/20 13:00:40 INFO SecurityManager: Changing view acls to: marin
+25/03/20 13:00:40 INFO SecurityManager: Changing modify acls to: marin
+25/03/20 13:00:40 INFO SecurityManager: Changing view acls groups to: 
+25/03/20 13:00:40 INFO SecurityManager: Changing modify acls groups to: 
+25/03/20 13:00:40 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: marin; groups with view permissions: EMPTY; users with modify permissions: marin; groups with modify permissions: EMPTY
+25/03/20 13:00:40 INFO Utils: Successfully started service 'sparkDriver' on port 46619.
+25/03/20 13:00:40 INFO SparkEnv: Registering MapOutputTracker
+25/03/20 13:00:40 INFO SparkEnv: Registering BlockManagerMaster
+25/03/20 13:00:40 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+25/03/20 13:00:40 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+25/03/20 13:00:40 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+25/03/20 13:00:40 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-eec61af5-a6ea-481f-9eca-e090dff80dbf
+25/03/20 13:00:40 INFO MemoryStore: MemoryStore started with capacity 434.4 MiB
+25/03/20 13:00:40 INFO SparkEnv: Registering OutputCommitCoordinator
+25/03/20 13:00:40 INFO JettyUtils: Start Jetty 172.28.131.111:4040 for SparkUI
+25/03/20 13:00:40 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+25/03/20 13:00:41 INFO DefaultNoHARMFailoverProxyProvider: Connecting to ResourceManager at localhost/127.0.0.1:8032
+25/03/20 13:00:41 INFO Configuration: resource-types.xml not found
+25/03/20 13:00:41 INFO ResourceUtils: Unable to find 'resource-types.xml'.
+25/03/20 13:00:41 INFO Client: Verifying our application has not requested more than the maximum memory capability of the cluster (8192 MB per container)
+25/03/20 13:00:41 INFO Client: Will allocate AM container, with 896 MB memory including 384 MB overhead
+25/03/20 13:00:41 INFO Client: Setting up container launch context for our AM
+25/03/20 13:00:41 INFO Client: Setting up the launch environment for our AM container
+25/03/20 13:00:41 INFO Client: Preparing resources for our AM container
+25/03/20 13:00:41 WARN Client: Neither spark.yarn.jars nor spark.yarn.archive is set, falling back to uploading libraries under SPARK_HOME.
+25/03/20 13:00:42 INFO Client: Uploading resource file:/tmp/spark-94be9c0d-8e2c-4b02-988e-ea051b8268f8/__spark_libs__16675963189184900976.zip -> hdfs://localhost:9000/user/marin/.sparkStaging/application_1742471362037_0003/__spark_libs__16675963189184900976.zip
+25/03/20 13:00:42 INFO Client: Uploading resource file:/opt/spark/python/lib/pyspark.zip -> hdfs://localhost:9000/user/marin/.sparkStaging/application_1742471362037_0003/pyspark.zip
+25/03/20 13:00:42 INFO Client: Uploading resource file:/opt/spark/python/lib/py4j-0.10.9.7-src.zip -> hdfs://localhost:9000/user/marin/.sparkStaging/application_1742471362037_0003/py4j-0.10.9.7-src.zip
+25/03/20 13:00:43 INFO Client: Uploading resource file:/tmp/spark-94be9c0d-8e2c-4b02-988e-ea051b8268f8/__spark_conf__4463476375234527322.zip -> hdfs://localhost:9000/user/marin/.sparkStaging/application_1742471362037_0003/__spark_conf__.zip
+25/03/20 13:00:43 INFO SecurityManager: Changing view acls to: marin
+25/03/20 13:00:43 INFO SecurityManager: Changing modify acls to: marin
+25/03/20 13:00:43 INFO SecurityManager: Changing view acls groups to: 
+25/03/20 13:00:43 INFO SecurityManager: Changing modify acls groups to: 
+25/03/20 13:00:43 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: marin; groups with view permissions: EMPTY; users with modify permissions: marin; groups with modify permissions: EMPTY
+25/03/20 13:00:43 INFO Client: Submitting application application_1742471362037_0003 to ResourceManager
+25/03/20 13:00:43 INFO YarnClientImpl: Submitted application application_1742471362037_0003
+25/03/20 13:00:44 INFO Client: Application report for application_1742471362037_0003 (state: ACCEPTED)
+25/03/20 13:00:44 INFO Client: 
+	 client token: N/A
+	 diagnostics: AM container is launched, waiting for AM container to Register with RM
+	 ApplicationMaster host: N/A
+	 ApplicationMaster RPC port: -1
+	 queue: default
+	 start time: 1742472043856
+	 final status: UNDEFINED
+	 tracking URL: http://localhost:8088/proxy/application_1742471362037_0003/
+	 user: marin
+25/03/20 13:00:47 INFO YarnClientSchedulerBackend: Add WebUI Filter. org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter, Map(PROXY_HOSTS -> localhost, PROXY_URI_BASES -> http://localhost:8088/proxy/application_1742471362037_0003), /proxy/application_1742471362037_0003
+25/03/20 13:00:47 INFO YarnSchedulerBackend$YarnSchedulerEndpoint: ApplicationMaster registered as NettyRpcEndpointRef(spark-client://YarnAM)
+25/03/20 13:00:47 INFO Client: Application report for application_1742471362037_0003 (state: RUNNING)
+25/03/20 13:00:47 INFO Client: 
+	 client token: N/A
+	 diagnostics: N/A
+	 ApplicationMaster host: 172.28.131.111
+	 ApplicationMaster RPC port: -1
+	 queue: default
+	 start time: 1742472043856
+	 final status: UNDEFINED
+	 tracking URL: http://localhost:8088/proxy/application_1742471362037_0003/
+	 user: marin
+25/03/20 13:00:47 INFO YarnClientSchedulerBackend: Application application_1742471362037_0003 has started running.
+25/03/20 13:00:47 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 37575.
+25/03/20 13:00:47 INFO NettyBlockTransferService: Server created on openroam-prg-gm-1-131-111.net.univ-paris-diderot.fr:37575
+25/03/20 13:00:47 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+25/03/20 13:00:47 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, openroam-prg-gm-1-131-111.net.univ-paris-diderot.fr, 37575, None)
+25/03/20 13:00:47 INFO BlockManagerMasterEndpoint: Registering block manager openroam-prg-gm-1-131-111.net.univ-paris-diderot.fr:37575 with 434.4 MiB RAM, BlockManagerId(driver, openroam-prg-gm-1-131-111.net.univ-paris-diderot.fr, 37575, None)
+25/03/20 13:00:47 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, openroam-prg-gm-1-131-111.net.univ-paris-diderot.fr, 37575, None)
+25/03/20 13:00:47 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, openroam-prg-gm-1-131-111.net.univ-paris-diderot.fr, 37575, None)
+25/03/20 13:00:48 INFO ServerInfo: Adding filter to /jobs: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+25/03/20 13:00:48 INFO ServerInfo: Adding filter to /jobs/json: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+25/03/20 13:00:48 INFO ServerInfo: Adding filter to /jobs/job: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+25/03/20 13:00:48 INFO ServerInfo: Adding filter to /jobs/job/json: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+25/03/20 13:00:48 INFO ServerInfo: Adding filter to /stages: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+25/03/20 13:00:48 INFO ServerInfo: Adding filter to /stages/json: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+25/03/20 13:00:48 INFO ServerInfo: Adding filter to /stages/stage: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+25/03/20 13:00:48 INFO ServerInfo: Adding filter to /stages/stage/json: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+25/03/20 13:00:48 INFO ServerInfo: Adding filter to /stages/pool: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+25/03/20 13:00:48 INFO ServerInfo: Adding filter to /stages/pool/json: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+25/03/20 13:00:48 INFO ServerInfo: Adding filter to /storage: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+25/03/20 13:00:48 INFO ServerInfo: Adding filter to /storage/json: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+25/03/20 13:00:48 INFO ServerInfo: Adding filter to /storage/rdd: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+25/03/20 13:00:48 INFO ServerInfo: Adding filter to /storage/rdd/json: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+25/03/20 13:00:48 INFO ServerInfo: Adding filter to /environment: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+25/03/20 13:00:48 INFO ServerInfo: Adding filter to /environment/json: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+25/03/20 13:00:48 INFO ServerInfo: Adding filter to /executors: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+25/03/20 13:00:48 INFO ServerInfo: Adding filter to /executors/json: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+25/03/20 13:00:48 INFO ServerInfo: Adding filter to /executors/threadDump: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+25/03/20 13:00:48 INFO ServerInfo: Adding filter to /executors/threadDump/json: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+25/03/20 13:00:48 INFO ServerInfo: Adding filter to /executors/heapHistogram: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+25/03/20 13:00:48 INFO ServerInfo: Adding filter to /executors/heapHistogram/json: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+25/03/20 13:00:48 INFO ServerInfo: Adding filter to /static: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+25/03/20 13:00:48 INFO ServerInfo: Adding filter to /: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+25/03/20 13:00:48 INFO ServerInfo: Adding filter to /api: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+25/03/20 13:00:48 INFO ServerInfo: Adding filter to /jobs/job/kill: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+25/03/20 13:00:48 INFO ServerInfo: Adding filter to /stages/stage/kill: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+25/03/20 13:00:48 INFO ServerInfo: Adding filter to /metrics/json: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+25/03/20 13:00:51 INFO YarnSchedulerBackend$YarnDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (172.28.131.111:43546) with ID 1,  ResourceProfileId 0
+25/03/20 13:00:51 INFO BlockManagerMasterEndpoint: Registering block manager localhost:41017 with 2.2 GiB RAM, BlockManagerId(1, localhost, 41017, None)
+25/03/20 13:01:11 INFO YarnClientSchedulerBackend: SchedulerBackend is ready for scheduling beginning after waiting maxRegisteredResourcesWaitingTime: 30000000000(ns)
+25/03/20 13:01:11 INFO SharedState: Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir.
+25/03/20 13:01:11 INFO SharedState: Warehouse path is 'file:/home/marin/M1/Big-Data/spark-warehouse'.
+25/03/20 13:01:11 INFO ServerInfo: Adding filter to /SQL: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+25/03/20 13:01:11 INFO ServerInfo: Adding filter to /SQL/json: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+25/03/20 13:01:11 INFO ServerInfo: Adding filter to /SQL/execution: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+25/03/20 13:01:11 INFO ServerInfo: Adding filter to /SQL/execution/json: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+25/03/20 13:01:11 INFO ServerInfo: Adding filter to /static/sql: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+25/03/20 13:01:11 INFO InMemoryFileIndex: It took 43 ms to list leaf files for 1 paths.
+25/03/20 13:01:11 INFO InMemoryFileIndex: It took 4 ms to list leaf files for 1 paths.
+25/03/20 13:01:13 INFO FileSourceStrategy: Pushed Filters: 
+25/03/20 13:01:13 INFO FileSourceStrategy: Post-Scan Filters: (length(trim(value#0, None)) > 0)
+25/03/20 13:01:13 INFO CodeGenerator: Code generated in 168.127638 ms
+25/03/20 13:01:13 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 201.5 KiB, free 434.2 MiB)
+25/03/20 13:01:13 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 35.1 KiB, free 434.2 MiB)
+25/03/20 13:01:13 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on openroam-prg-gm-1-131-111.net.univ-paris-diderot.fr:37575 (size: 35.1 KiB, free: 434.4 MiB)
+25/03/20 13:01:13 INFO SparkContext: Created broadcast 0 from csv at NativeMethodAccessorImpl.java:0
+25/03/20 13:01:13 INFO FileSourceScanExec: Planning scan with bin packing, max size: 68101915 bytes, open cost is considered as scanning 4194304 bytes.
+25/03/20 13:01:13 INFO SparkContext: Starting job: csv at NativeMethodAccessorImpl.java:0
+25/03/20 13:01:13 INFO DAGScheduler: Got job 0 (csv at NativeMethodAccessorImpl.java:0) with 1 output partitions
+25/03/20 13:01:13 INFO DAGScheduler: Final stage: ResultStage 0 (csv at NativeMethodAccessorImpl.java:0)
+25/03/20 13:01:13 INFO DAGScheduler: Parents of final stage: List()
+25/03/20 13:01:13 INFO DAGScheduler: Missing parents: List()
+25/03/20 13:01:13 INFO DAGScheduler: Submitting ResultStage 0 (MapPartitionsRDD[3] at csv at NativeMethodAccessorImpl.java:0), which has no missing parents
+25/03/20 13:01:14 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 13.5 KiB, free 434.2 MiB)
+25/03/20 13:01:14 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 6.4 KiB, free 434.1 MiB)
+25/03/20 13:01:14 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on openroam-prg-gm-1-131-111.net.univ-paris-diderot.fr:37575 (size: 6.4 KiB, free: 434.4 MiB)
+25/03/20 13:01:14 INFO SparkContext: Created broadcast 1 from broadcast at DAGScheduler.scala:1585
+25/03/20 13:01:14 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 0 (MapPartitionsRDD[3] at csv at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+25/03/20 13:01:14 INFO YarnScheduler: Adding task set 0.0 with 1 tasks resource profile 0
+25/03/20 13:01:14 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0) (localhost, executor 1, partition 0, PROCESS_LOCAL, 9630 bytes) 
+25/03/20 13:01:14 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on localhost:41017 (size: 6.4 KiB, free: 2.2 GiB)
+25/03/20 13:01:14 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on localhost:41017 (size: 35.1 KiB, free: 2.2 GiB)
+25/03/20 13:01:15 INFO TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 1437 ms on localhost (executor 1) (1/1)
+25/03/20 13:01:15 INFO YarnScheduler: Removed TaskSet 0.0, whose tasks have all completed, from pool 
+25/03/20 13:01:15 INFO DAGScheduler: ResultStage 0 (csv at NativeMethodAccessorImpl.java:0) finished in 1,543 s
+25/03/20 13:01:15 INFO DAGScheduler: Job 0 is finished. Cancelling potential speculative or zombie tasks for this job
+25/03/20 13:01:15 INFO YarnScheduler: Killing all running tasks in stage 0: Stage finished
+25/03/20 13:01:15 INFO DAGScheduler: Job 0 finished: csv at NativeMethodAccessorImpl.java:0, took 1,585429 s
+25/03/20 13:01:15 INFO CodeGenerator: Code generated in 13.10453 ms
+25/03/20 13:01:15 INFO FileSourceStrategy: Pushed Filters: 
+25/03/20 13:01:15 INFO FileSourceStrategy: Post-Scan Filters: 
+25/03/20 13:01:15 INFO MemoryStore: Block broadcast_2 stored as values in memory (estimated size 201.5 KiB, free 434.0 MiB)
+25/03/20 13:01:15 INFO MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 35.1 KiB, free 433.9 MiB)
+25/03/20 13:01:15 INFO BlockManagerInfo: Added broadcast_2_piece0 in memory on openroam-prg-gm-1-131-111.net.univ-paris-diderot.fr:37575 (size: 35.1 KiB, free: 434.3 MiB)
+25/03/20 13:01:15 INFO SparkContext: Created broadcast 2 from csv at NativeMethodAccessorImpl.java:0
+25/03/20 13:01:15 INFO FileSourceScanExec: Planning scan with bin packing, max size: 68101915 bytes, open cost is considered as scanning 4194304 bytes.
+25/03/20 13:01:15 INFO SparkContext: Starting job: csv at NativeMethodAccessorImpl.java:0
+25/03/20 13:01:15 INFO DAGScheduler: Got job 1 (csv at NativeMethodAccessorImpl.java:0) with 2 output partitions
+25/03/20 13:01:15 INFO DAGScheduler: Final stage: ResultStage 1 (csv at NativeMethodAccessorImpl.java:0)
+25/03/20 13:01:15 INFO DAGScheduler: Parents of final stage: List()
+25/03/20 13:01:15 INFO DAGScheduler: Missing parents: List()
+25/03/20 13:01:15 INFO DAGScheduler: Submitting ResultStage 1 (MapPartitionsRDD[9] at csv at NativeMethodAccessorImpl.java:0), which has no missing parents
+25/03/20 13:01:15 INFO MemoryStore: Block broadcast_3 stored as values in memory (estimated size 28.5 KiB, free 433.9 MiB)
+25/03/20 13:01:15 INFO MemoryStore: Block broadcast_3_piece0 stored as bytes in memory (estimated size 13.2 KiB, free 433.9 MiB)
+25/03/20 13:01:15 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on openroam-prg-gm-1-131-111.net.univ-paris-diderot.fr:37575 (size: 13.2 KiB, free: 434.3 MiB)
+25/03/20 13:01:15 INFO SparkContext: Created broadcast 3 from broadcast at DAGScheduler.scala:1585
+25/03/20 13:01:15 INFO DAGScheduler: Submitting 2 missing tasks from ResultStage 1 (MapPartitionsRDD[9] at csv at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0, 1))
+25/03/20 13:01:15 INFO YarnScheduler: Adding task set 1.0 with 2 tasks resource profile 0
+25/03/20 13:01:15 INFO TaskSetManager: Starting task 0.0 in stage 1.0 (TID 1) (localhost, executor 1, partition 0, PROCESS_LOCAL, 9630 bytes) 
+25/03/20 13:01:15 INFO TaskSetManager: Starting task 1.0 in stage 1.0 (TID 2) (localhost, executor 1, partition 1, PROCESS_LOCAL, 9630 bytes) 
+25/03/20 13:01:15 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on localhost:41017 (size: 13.2 KiB, free: 2.2 GiB)
+25/03/20 13:01:16 INFO BlockManagerInfo: Added broadcast_2_piece0 in memory on localhost:41017 (size: 35.1 KiB, free: 2.2 GiB)
+25/03/20 13:01:19 INFO TaskSetManager: Finished task 1.0 in stage 1.0 (TID 2) in 3650 ms on localhost (executor 1) (1/2)
+25/03/20 13:01:19 INFO TaskSetManager: Finished task 0.0 in stage 1.0 (TID 1) in 3804 ms on localhost (executor 1) (2/2)
+25/03/20 13:01:19 INFO YarnScheduler: Removed TaskSet 1.0, whose tasks have all completed, from pool 
+25/03/20 13:01:19 INFO DAGScheduler: ResultStage 1 (csv at NativeMethodAccessorImpl.java:0) finished in 3,828 s
+25/03/20 13:01:19 INFO DAGScheduler: Job 1 is finished. Cancelling potential speculative or zombie tasks for this job
+25/03/20 13:01:19 INFO YarnScheduler: Killing all running tasks in stage 1: Stage finished
+25/03/20 13:01:19 INFO DAGScheduler: Job 1 finished: csv at NativeMethodAccessorImpl.java:0, took 3,834299 s
+25/03/20 13:01:19 INFO InMemoryFileIndex: It took 2 ms to list leaf files for 1 paths.
+25/03/20 13:01:19 INFO InMemoryFileIndex: It took 3 ms to list leaf files for 1 paths.
+25/03/20 13:01:19 INFO FileSourceStrategy: Pushed Filters: 
+25/03/20 13:01:19 INFO FileSourceStrategy: Post-Scan Filters: (length(trim(value#43, None)) > 0)
+25/03/20 13:01:19 INFO MemoryStore: Block broadcast_4 stored as values in memory (estimated size 201.5 KiB, free 433.7 MiB)
+25/03/20 13:01:19 INFO MemoryStore: Block broadcast_4_piece0 stored as bytes in memory (estimated size 35.1 KiB, free 433.6 MiB)
+25/03/20 13:01:19 INFO BlockManagerInfo: Added broadcast_4_piece0 in memory on openroam-prg-gm-1-131-111.net.univ-paris-diderot.fr:37575 (size: 35.1 KiB, free: 434.3 MiB)
+25/03/20 13:01:19 INFO SparkContext: Created broadcast 4 from csv at NativeMethodAccessorImpl.java:0
+25/03/20 13:01:19 INFO FileSourceScanExec: Planning scan with bin packing, max size: 10354586 bytes, open cost is considered as scanning 4194304 bytes.
+25/03/20 13:01:19 INFO SparkContext: Starting job: csv at NativeMethodAccessorImpl.java:0
+25/03/20 13:01:19 INFO DAGScheduler: Got job 2 (csv at NativeMethodAccessorImpl.java:0) with 1 output partitions
+25/03/20 13:01:19 INFO DAGScheduler: Final stage: ResultStage 2 (csv at NativeMethodAccessorImpl.java:0)
+25/03/20 13:01:19 INFO DAGScheduler: Parents of final stage: List()
+25/03/20 13:01:19 INFO DAGScheduler: Missing parents: List()
+25/03/20 13:01:19 INFO DAGScheduler: Submitting ResultStage 2 (MapPartitionsRDD[13] at csv at NativeMethodAccessorImpl.java:0), which has no missing parents
+25/03/20 13:01:19 INFO MemoryStore: Block broadcast_5 stored as values in memory (estimated size 13.5 KiB, free 433.6 MiB)
+25/03/20 13:01:19 INFO MemoryStore: Block broadcast_5_piece0 stored as bytes in memory (estimated size 6.4 KiB, free 433.6 MiB)
+25/03/20 13:01:19 INFO BlockManagerInfo: Added broadcast_5_piece0 in memory on openroam-prg-gm-1-131-111.net.univ-paris-diderot.fr:37575 (size: 6.4 KiB, free: 434.3 MiB)
+25/03/20 13:01:19 INFO SparkContext: Created broadcast 5 from broadcast at DAGScheduler.scala:1585
+25/03/20 13:01:19 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 2 (MapPartitionsRDD[13] at csv at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+25/03/20 13:01:19 INFO YarnScheduler: Adding task set 2.0 with 1 tasks resource profile 0
+25/03/20 13:01:19 INFO TaskSetManager: Starting task 0.0 in stage 2.0 (TID 3) (localhost, executor 1, partition 0, PROCESS_LOCAL, 9636 bytes) 
+25/03/20 13:01:19 INFO BlockManagerInfo: Removed broadcast_2_piece0 on openroam-prg-gm-1-131-111.net.univ-paris-diderot.fr:37575 in memory (size: 35.1 KiB, free: 434.3 MiB)
+25/03/20 13:01:19 INFO BlockManagerInfo: Removed broadcast_2_piece0 on localhost:41017 in memory (size: 35.1 KiB, free: 2.2 GiB)
+25/03/20 13:01:19 INFO BlockManagerInfo: Added broadcast_5_piece0 in memory on localhost:41017 (size: 6.4 KiB, free: 2.2 GiB)
+25/03/20 13:01:19 INFO BlockManagerInfo: Removed broadcast_3_piece0 on openroam-prg-gm-1-131-111.net.univ-paris-diderot.fr:37575 in memory (size: 13.2 KiB, free: 434.3 MiB)
+25/03/20 13:01:19 INFO BlockManagerInfo: Removed broadcast_3_piece0 on localhost:41017 in memory (size: 13.2 KiB, free: 2.2 GiB)
+25/03/20 13:01:19 INFO BlockManagerInfo: Removed broadcast_1_piece0 on openroam-prg-gm-1-131-111.net.univ-paris-diderot.fr:37575 in memory (size: 6.4 KiB, free: 434.3 MiB)
+25/03/20 13:01:19 INFO BlockManagerInfo: Removed broadcast_1_piece0 on localhost:41017 in memory (size: 6.4 KiB, free: 2.2 GiB)
+25/03/20 13:01:19 INFO BlockManagerInfo: Removed broadcast_0_piece0 on openroam-prg-gm-1-131-111.net.univ-paris-diderot.fr:37575 in memory (size: 35.1 KiB, free: 434.4 MiB)
+25/03/20 13:01:19 INFO BlockManagerInfo: Added broadcast_4_piece0 in memory on localhost:41017 (size: 35.1 KiB, free: 2.2 GiB)
+25/03/20 13:01:19 INFO BlockManagerInfo: Removed broadcast_0_piece0 on localhost:41017 in memory (size: 35.1 KiB, free: 2.2 GiB)
+25/03/20 13:01:19 INFO TaskSetManager: Finished task 0.0 in stage 2.0 (TID 3) in 69 ms on localhost (executor 1) (1/1)
+25/03/20 13:01:19 INFO YarnScheduler: Removed TaskSet 2.0, whose tasks have all completed, from pool 
+25/03/20 13:01:19 INFO DAGScheduler: ResultStage 2 (csv at NativeMethodAccessorImpl.java:0) finished in 0,083 s
+25/03/20 13:01:19 INFO DAGScheduler: Job 2 is finished. Cancelling potential speculative or zombie tasks for this job
+25/03/20 13:01:19 INFO YarnScheduler: Killing all running tasks in stage 2: Stage finished
+25/03/20 13:01:19 INFO DAGScheduler: Job 2 finished: csv at NativeMethodAccessorImpl.java:0, took 0,088134 s
+25/03/20 13:01:19 INFO FileSourceStrategy: Pushed Filters: 
+25/03/20 13:01:19 INFO FileSourceStrategy: Post-Scan Filters: 
+25/03/20 13:01:19 INFO MemoryStore: Block broadcast_6 stored as values in memory (estimated size 201.5 KiB, free 434.0 MiB)
+25/03/20 13:01:19 INFO MemoryStore: Block broadcast_6_piece0 stored as bytes in memory (estimated size 35.1 KiB, free 433.9 MiB)
+25/03/20 13:01:19 INFO BlockManagerInfo: Added broadcast_6_piece0 in memory on openroam-prg-gm-1-131-111.net.univ-paris-diderot.fr:37575 (size: 35.1 KiB, free: 434.3 MiB)
+25/03/20 13:01:19 INFO SparkContext: Created broadcast 6 from csv at NativeMethodAccessorImpl.java:0
+25/03/20 13:01:19 INFO FileSourceScanExec: Planning scan with bin packing, max size: 10354586 bytes, open cost is considered as scanning 4194304 bytes.
+25/03/20 13:01:19 INFO SparkContext: Starting job: csv at NativeMethodAccessorImpl.java:0
+25/03/20 13:01:19 INFO DAGScheduler: Got job 3 (csv at NativeMethodAccessorImpl.java:0) with 2 output partitions
+25/03/20 13:01:19 INFO DAGScheduler: Final stage: ResultStage 3 (csv at NativeMethodAccessorImpl.java:0)
+25/03/20 13:01:19 INFO DAGScheduler: Parents of final stage: List()
+25/03/20 13:01:19 INFO DAGScheduler: Missing parents: List()
+25/03/20 13:01:19 INFO DAGScheduler: Submitting ResultStage 3 (MapPartitionsRDD[19] at csv at NativeMethodAccessorImpl.java:0), which has no missing parents
+25/03/20 13:01:19 INFO MemoryStore: Block broadcast_7 stored as values in memory (estimated size 28.4 KiB, free 433.9 MiB)
+25/03/20 13:01:19 INFO MemoryStore: Block broadcast_7_piece0 stored as bytes in memory (estimated size 13.1 KiB, free 433.9 MiB)
+25/03/20 13:01:19 INFO BlockManagerInfo: Added broadcast_7_piece0 in memory on openroam-prg-gm-1-131-111.net.univ-paris-diderot.fr:37575 (size: 13.1 KiB, free: 434.3 MiB)
+25/03/20 13:01:19 INFO SparkContext: Created broadcast 7 from broadcast at DAGScheduler.scala:1585
+25/03/20 13:01:19 INFO DAGScheduler: Submitting 2 missing tasks from ResultStage 3 (MapPartitionsRDD[19] at csv at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0, 1))
+25/03/20 13:01:19 INFO YarnScheduler: Adding task set 3.0 with 2 tasks resource profile 0
+25/03/20 13:01:19 INFO TaskSetManager: Starting task 0.0 in stage 3.0 (TID 4) (localhost, executor 1, partition 0, PROCESS_LOCAL, 9636 bytes) 
+25/03/20 13:01:19 INFO TaskSetManager: Starting task 1.0 in stage 3.0 (TID 5) (localhost, executor 1, partition 1, PROCESS_LOCAL, 9636 bytes) 
+25/03/20 13:01:19 INFO BlockManagerInfo: Added broadcast_7_piece0 in memory on localhost:41017 (size: 13.1 KiB, free: 2.2 GiB)
+25/03/20 13:01:19 INFO BlockManagerInfo: Added broadcast_6_piece0 in memory on localhost:41017 (size: 35.1 KiB, free: 2.2 GiB)
+25/03/20 13:01:20 INFO TaskSetManager: Finished task 1.0 in stage 3.0 (TID 5) in 564 ms on localhost (executor 1) (1/2)
+25/03/20 13:01:20 INFO TaskSetManager: Finished task 0.0 in stage 3.0 (TID 4) in 752 ms on localhost (executor 1) (2/2)
+25/03/20 13:01:20 INFO YarnScheduler: Removed TaskSet 3.0, whose tasks have all completed, from pool 
+25/03/20 13:01:20 INFO DAGScheduler: ResultStage 3 (csv at NativeMethodAccessorImpl.java:0) finished in 0,760 s
+25/03/20 13:01:20 INFO DAGScheduler: Job 3 is finished. Cancelling potential speculative or zombie tasks for this job
+25/03/20 13:01:20 INFO YarnScheduler: Killing all running tasks in stage 3: Stage finished
+25/03/20 13:01:20 INFO DAGScheduler: Job 3 finished: csv at NativeMethodAccessorImpl.java:0, took 0,764684 s
+25/03/20 13:01:20 INFO InMemoryFileIndex: It took 2 ms to list leaf files for 1 paths.
+25/03/20 13:01:20 INFO InMemoryFileIndex: It took 3 ms to list leaf files for 1 paths.
+25/03/20 13:01:20 INFO FileSourceStrategy: Pushed Filters: 
+25/03/20 13:01:20 INFO FileSourceStrategy: Post-Scan Filters: (length(trim(value#70, None)) > 0)
+25/03/20 13:01:20 INFO MemoryStore: Block broadcast_8 stored as values in memory (estimated size 201.5 KiB, free 433.7 MiB)
+25/03/20 13:01:20 INFO MemoryStore: Block broadcast_8_piece0 stored as bytes in memory (estimated size 35.1 KiB, free 433.6 MiB)
+25/03/20 13:01:20 INFO BlockManagerInfo: Added broadcast_8_piece0 in memory on openroam-prg-gm-1-131-111.net.univ-paris-diderot.fr:37575 (size: 35.1 KiB, free: 434.3 MiB)
+25/03/20 13:01:20 INFO SparkContext: Created broadcast 8 from csv at NativeMethodAccessorImpl.java:0
+25/03/20 13:01:20 INFO FileSourceScanExec: Planning scan with bin packing, max size: 12725230 bytes, open cost is considered as scanning 4194304 bytes.
+25/03/20 13:01:20 INFO SparkContext: Starting job: csv at NativeMethodAccessorImpl.java:0
+25/03/20 13:01:20 INFO DAGScheduler: Got job 4 (csv at NativeMethodAccessorImpl.java:0) with 1 output partitions
+25/03/20 13:01:20 INFO DAGScheduler: Final stage: ResultStage 4 (csv at NativeMethodAccessorImpl.java:0)
+25/03/20 13:01:20 INFO DAGScheduler: Parents of final stage: List()
+25/03/20 13:01:20 INFO DAGScheduler: Missing parents: List()
+25/03/20 13:01:20 INFO DAGScheduler: Submitting ResultStage 4 (MapPartitionsRDD[23] at csv at NativeMethodAccessorImpl.java:0), which has no missing parents
+25/03/20 13:01:20 INFO MemoryStore: Block broadcast_9 stored as values in memory (estimated size 13.5 KiB, free 433.6 MiB)
+25/03/20 13:01:20 INFO MemoryStore: Block broadcast_9_piece0 stored as bytes in memory (estimated size 6.4 KiB, free 433.6 MiB)
+25/03/20 13:01:20 INFO BlockManagerInfo: Added broadcast_9_piece0 in memory on openroam-prg-gm-1-131-111.net.univ-paris-diderot.fr:37575 (size: 6.4 KiB, free: 434.3 MiB)
+25/03/20 13:01:20 INFO SparkContext: Created broadcast 9 from broadcast at DAGScheduler.scala:1585
+25/03/20 13:01:20 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 4 (MapPartitionsRDD[23] at csv at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+25/03/20 13:01:20 INFO YarnScheduler: Adding task set 4.0 with 1 tasks resource profile 0
+25/03/20 13:01:20 INFO TaskSetManager: Starting task 0.0 in stage 4.0 (TID 6) (localhost, executor 1, partition 0, PROCESS_LOCAL, 9624 bytes) 
+25/03/20 13:01:20 INFO BlockManagerInfo: Added broadcast_9_piece0 in memory on localhost:41017 (size: 6.4 KiB, free: 2.2 GiB)
+25/03/20 13:01:20 INFO BlockManagerInfo: Added broadcast_8_piece0 in memory on localhost:41017 (size: 35.1 KiB, free: 2.2 GiB)
+25/03/20 13:01:20 INFO TaskSetManager: Finished task 0.0 in stage 4.0 (TID 6) in 51 ms on localhost (executor 1) (1/1)
+25/03/20 13:01:20 INFO YarnScheduler: Removed TaskSet 4.0, whose tasks have all completed, from pool 
+25/03/20 13:01:20 INFO DAGScheduler: ResultStage 4 (csv at NativeMethodAccessorImpl.java:0) finished in 0,056 s
+25/03/20 13:01:20 INFO DAGScheduler: Job 4 is finished. Cancelling potential speculative or zombie tasks for this job
+25/03/20 13:01:20 INFO YarnScheduler: Killing all running tasks in stage 4: Stage finished
+25/03/20 13:01:20 INFO DAGScheduler: Job 4 finished: csv at NativeMethodAccessorImpl.java:0, took 0,059795 s
+25/03/20 13:01:20 INFO FileSourceStrategy: Pushed Filters: 
+25/03/20 13:01:20 INFO FileSourceStrategy: Post-Scan Filters: 
+25/03/20 13:01:20 INFO MemoryStore: Block broadcast_10 stored as values in memory (estimated size 201.5 KiB, free 433.4 MiB)
+25/03/20 13:01:20 INFO MemoryStore: Block broadcast_10_piece0 stored as bytes in memory (estimated size 35.1 KiB, free 433.4 MiB)
+25/03/20 13:01:20 INFO BlockManagerInfo: Added broadcast_10_piece0 in memory on openroam-prg-gm-1-131-111.net.univ-paris-diderot.fr:37575 (size: 35.1 KiB, free: 434.2 MiB)
+25/03/20 13:01:20 INFO SparkContext: Created broadcast 10 from csv at NativeMethodAccessorImpl.java:0
+25/03/20 13:01:20 INFO FileSourceScanExec: Planning scan with bin packing, max size: 12725230 bytes, open cost is considered as scanning 4194304 bytes.
+25/03/20 13:01:20 INFO SparkContext: Starting job: csv at NativeMethodAccessorImpl.java:0
+25/03/20 13:01:20 INFO DAGScheduler: Got job 5 (csv at NativeMethodAccessorImpl.java:0) with 2 output partitions
+25/03/20 13:01:20 INFO DAGScheduler: Final stage: ResultStage 5 (csv at NativeMethodAccessorImpl.java:0)
+25/03/20 13:01:20 INFO DAGScheduler: Parents of final stage: List()
+25/03/20 13:01:20 INFO DAGScheduler: Missing parents: List()
+25/03/20 13:01:20 INFO DAGScheduler: Submitting ResultStage 5 (MapPartitionsRDD[29] at csv at NativeMethodAccessorImpl.java:0), which has no missing parents
+25/03/20 13:01:20 INFO MemoryStore: Block broadcast_11 stored as values in memory (estimated size 28.7 KiB, free 433.4 MiB)
+25/03/20 13:01:20 INFO MemoryStore: Block broadcast_11_piece0 stored as bytes in memory (estimated size 13.2 KiB, free 433.4 MiB)
+25/03/20 13:01:20 INFO BlockManagerInfo: Added broadcast_11_piece0 in memory on openroam-prg-gm-1-131-111.net.univ-paris-diderot.fr:37575 (size: 13.2 KiB, free: 434.2 MiB)
+25/03/20 13:01:20 INFO SparkContext: Created broadcast 11 from broadcast at DAGScheduler.scala:1585
+25/03/20 13:01:20 INFO DAGScheduler: Submitting 2 missing tasks from ResultStage 5 (MapPartitionsRDD[29] at csv at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0, 1))
+25/03/20 13:01:20 INFO YarnScheduler: Adding task set 5.0 with 2 tasks resource profile 0
+25/03/20 13:01:20 INFO TaskSetManager: Starting task 0.0 in stage 5.0 (TID 7) (localhost, executor 1, partition 0, PROCESS_LOCAL, 9624 bytes) 
+25/03/20 13:01:20 INFO TaskSetManager: Starting task 1.0 in stage 5.0 (TID 8) (localhost, executor 1, partition 1, PROCESS_LOCAL, 9624 bytes) 
+25/03/20 13:01:20 INFO BlockManagerInfo: Added broadcast_11_piece0 in memory on localhost:41017 (size: 13.2 KiB, free: 2.2 GiB)
+25/03/20 13:01:20 INFO BlockManagerInfo: Added broadcast_10_piece0 in memory on localhost:41017 (size: 35.1 KiB, free: 2.2 GiB)
+25/03/20 13:01:21 INFO TaskSetManager: Finished task 1.0 in stage 5.0 (TID 8) in 642 ms on localhost (executor 1) (1/2)
+25/03/20 13:01:21 INFO TaskSetManager: Finished task 0.0 in stage 5.0 (TID 7) in 704 ms on localhost (executor 1) (2/2)
+25/03/20 13:01:21 INFO YarnScheduler: Removed TaskSet 5.0, whose tasks have all completed, from pool 
+25/03/20 13:01:21 INFO DAGScheduler: ResultStage 5 (csv at NativeMethodAccessorImpl.java:0) finished in 0,713 s
+25/03/20 13:01:21 INFO DAGScheduler: Job 5 is finished. Cancelling potential speculative or zombie tasks for this job
+25/03/20 13:01:21 INFO YarnScheduler: Killing all running tasks in stage 5: Stage finished
+25/03/20 13:01:21 INFO DAGScheduler: Job 5 finished: csv at NativeMethodAccessorImpl.java:0, took 0,717947 s
+25/03/20 13:01:21 INFO FileSourceStrategy: Pushed Filters: 
+25/03/20 13:01:21 INFO FileSourceStrategy: Post-Scan Filters: 
+25/03/20 13:01:21 INFO FileSourceStrategy: Pushed Filters: 
+25/03/20 13:01:21 INFO FileSourceStrategy: Post-Scan Filters: 
+25/03/20 13:01:21 INFO FileSourceStrategy: Pushed Filters: 
+25/03/20 13:01:21 INFO FileSourceStrategy: Post-Scan Filters: 
+Début Requête 1
+25/03/20 13:01:21 INFO MemoryStore: Block broadcast_12 stored as values in memory (estimated size 201.5 KiB, free 433.2 MiB)
+25/03/20 13:01:21 INFO MemoryStore: Block broadcast_12_piece0 stored as bytes in memory (estimated size 35.0 KiB, free 433.1 MiB)
+25/03/20 13:01:21 INFO BlockManagerInfo: Added broadcast_12_piece0 in memory on openroam-prg-gm-1-131-111.net.univ-paris-diderot.fr:37575 (size: 35.0 KiB, free: 434.2 MiB)
+25/03/20 13:01:21 INFO SparkContext: Created broadcast 12 from showString at NativeMethodAccessorImpl.java:0
+25/03/20 13:01:21 INFO FileSourceScanExec: Planning scan with bin packing, max size: 68101915 bytes, open cost is considered as scanning 4194304 bytes.
+25/03/20 13:01:21 INFO DAGScheduler: Registering RDD 32 (showString at NativeMethodAccessorImpl.java:0) as input to shuffle 0
+25/03/20 13:01:21 INFO DAGScheduler: Got map stage job 6 (showString at NativeMethodAccessorImpl.java:0) with 2 output partitions
+25/03/20 13:01:21 INFO DAGScheduler: Final stage: ShuffleMapStage 6 (showString at NativeMethodAccessorImpl.java:0)
+25/03/20 13:01:21 INFO DAGScheduler: Parents of final stage: List()
+25/03/20 13:01:21 INFO DAGScheduler: Missing parents: List()
+25/03/20 13:01:21 INFO DAGScheduler: Submitting ShuffleMapStage 6 (MapPartitionsRDD[32] at showString at NativeMethodAccessorImpl.java:0), which has no missing parents
+25/03/20 13:01:21 INFO MemoryStore: Block broadcast_13 stored as values in memory (estimated size 16.1 KiB, free 433.1 MiB)
+25/03/20 13:01:21 INFO MemoryStore: Block broadcast_13_piece0 stored as bytes in memory (estimated size 8.0 KiB, free 433.1 MiB)
+25/03/20 13:01:21 INFO BlockManagerInfo: Added broadcast_13_piece0 in memory on openroam-prg-gm-1-131-111.net.univ-paris-diderot.fr:37575 (size: 8.0 KiB, free: 434.2 MiB)
+25/03/20 13:01:21 INFO SparkContext: Created broadcast 13 from broadcast at DAGScheduler.scala:1585
+25/03/20 13:01:21 INFO DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 6 (MapPartitionsRDD[32] at showString at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0, 1))
+25/03/20 13:01:21 INFO YarnScheduler: Adding task set 6.0 with 2 tasks resource profile 0
+25/03/20 13:01:21 INFO TaskSetManager: Starting task 0.0 in stage 6.0 (TID 9) (localhost, executor 1, partition 0, PROCESS_LOCAL, 9619 bytes) 
+25/03/20 13:01:21 INFO TaskSetManager: Starting task 1.0 in stage 6.0 (TID 10) (localhost, executor 1, partition 1, PROCESS_LOCAL, 9619 bytes) 
+25/03/20 13:01:21 INFO BlockManagerInfo: Added broadcast_13_piece0 in memory on localhost:41017 (size: 8.0 KiB, free: 2.2 GiB)
+25/03/20 13:01:21 INFO BlockManagerInfo: Added broadcast_12_piece0 in memory on localhost:41017 (size: 35.0 KiB, free: 2.2 GiB)
+25/03/20 13:01:24 INFO TaskSetManager: Finished task 1.0 in stage 6.0 (TID 10) in 2644 ms on localhost (executor 1) (1/2)
+25/03/20 13:01:24 INFO TaskSetManager: Finished task 0.0 in stage 6.0 (TID 9) in 2786 ms on localhost (executor 1) (2/2)
+25/03/20 13:01:24 INFO YarnScheduler: Removed TaskSet 6.0, whose tasks have all completed, from pool 
+25/03/20 13:01:24 INFO DAGScheduler: ShuffleMapStage 6 (showString at NativeMethodAccessorImpl.java:0) finished in 2,802 s
+25/03/20 13:01:24 INFO DAGScheduler: looking for newly runnable stages
+25/03/20 13:01:24 INFO DAGScheduler: running: Set()
+25/03/20 13:01:24 INFO DAGScheduler: waiting: Set()
+25/03/20 13:01:24 INFO DAGScheduler: failed: Set()
+25/03/20 13:01:24 INFO DAGScheduler: Got job 7 (showString at NativeMethodAccessorImpl.java:0) with 4 output partitions
+25/03/20 13:01:24 INFO DAGScheduler: Final stage: ResultStage 8 (showString at NativeMethodAccessorImpl.java:0)
+25/03/20 13:01:24 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 7)
+25/03/20 13:01:24 INFO DAGScheduler: Missing parents: List()
+25/03/20 13:01:24 INFO DAGScheduler: Submitting ResultStage 8 (AdaptiveSparkPlan isFinalPlan=false
++- Exchange hashpartitioning(player_id#19, 4), REPARTITION_BY_NUM, [plan_id=63]
+   +- FileScan csv [appearance_id#17,game_id#18,player_id#19,player_club_id#20,player_current_club_id#21,date#22,player_name#23,competition_id#24,yellow_cards#25,red_cards#26,goals#27,assists#28,minutes_played#29] Batched: false, DataFilters: [], Format: CSV, Location: InMemoryFileIndex(1 paths)[hdfs://localhost:9000/user/marin/datasets/appearances.csv], PartitionFilters: [], PushedFilters: [], ReadSchema: struct<appearance_id:string,game_id:int,player_id:int,player_club_id:int,player_current_club_id:i...
+ MapPartitionsRDD[35] at showString at NativeMethodAccessorImpl.java:0), which has no missing parents
+25/03/20 13:01:24 INFO MemoryStore: Block broadcast_14 stored as values in memory (estimated size 12.3 KiB, free 433.1 MiB)
+25/03/20 13:01:24 INFO MemoryStore: Block broadcast_14_piece0 stored as bytes in memory (estimated size 6.3 KiB, free 433.1 MiB)
+25/03/20 13:01:24 INFO BlockManagerInfo: Added broadcast_14_piece0 in memory on openroam-prg-gm-1-131-111.net.univ-paris-diderot.fr:37575 (size: 6.3 KiB, free: 434.2 MiB)
+25/03/20 13:01:24 INFO SparkContext: Created broadcast 14 from broadcast at DAGScheduler.scala:1585
+25/03/20 13:01:24 INFO DAGScheduler: Submitting 4 missing tasks from ResultStage 8 (AdaptiveSparkPlan isFinalPlan=false
++- Exchange hashpartitioning(player_id#19, 4), REPARTITION_BY_NUM, [plan_id=63]
+   +- FileScan csv [appearance_id#17,game_id#18,player_id#19,player_club_id#20,player_current_club_id#21,date#22,player_name#23,competition_id#24,yellow_cards#25,red_cards#26,goals#27,assists#28,minutes_played#29] Batched: false, DataFilters: [], Format: CSV, Location: InMemoryFileIndex(1 paths)[hdfs://localhost:9000/user/marin/datasets/appearances.csv], PartitionFilters: [], PushedFilters: [], ReadSchema: struct<appearance_id:string,game_id:int,player_id:int,player_club_id:int,player_current_club_id:i...
+ MapPartitionsRDD[35] at showString at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0, 1, 2, 3))
+25/03/20 13:01:24 INFO YarnScheduler: Adding task set 8.0 with 4 tasks resource profile 0
+25/03/20 13:01:24 INFO TaskSetManager: Starting task 0.0 in stage 8.0 (TID 11) (localhost, executor 1, partition 0, NODE_LOCAL, 9010 bytes) 
+25/03/20 13:01:24 INFO TaskSetManager: Starting task 1.0 in stage 8.0 (TID 12) (localhost, executor 1, partition 1, NODE_LOCAL, 9010 bytes) 
+25/03/20 13:01:24 INFO BlockManagerInfo: Added broadcast_14_piece0 in memory on localhost:41017 (size: 6.3 KiB, free: 2.2 GiB)
+25/03/20 13:01:24 INFO MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 0 to 172.28.131.111:43546
+25/03/20 13:01:26 INFO BlockManagerInfo: Added rdd_35_0 in memory on localhost:41017 (size: 13.9 MiB, free: 2.2 GiB)
+25/03/20 13:01:26 INFO TaskSetManager: Starting task 2.0 in stage 8.0 (TID 13) (localhost, executor 1, partition 2, NODE_LOCAL, 9010 bytes) 
+25/03/20 13:01:26 INFO TaskSetManager: Finished task 0.0 in stage 8.0 (TID 11) in 1501 ms on localhost (executor 1) (1/4)
+25/03/20 13:01:26 INFO BlockManagerInfo: Added rdd_35_1 in memory on localhost:41017 (size: 14.2 MiB, free: 2.2 GiB)
+25/03/20 13:01:26 INFO TaskSetManager: Starting task 3.0 in stage 8.0 (TID 14) (localhost, executor 1, partition 3, NODE_LOCAL, 9010 bytes) 
+25/03/20 13:01:26 INFO TaskSetManager: Finished task 1.0 in stage 8.0 (TID 12) in 1516 ms on localhost (executor 1) (2/4)
+25/03/20 13:01:26 INFO BlockManagerInfo: Added rdd_35_2 in memory on localhost:41017 (size: 13.5 MiB, free: 2.2 GiB)
+25/03/20 13:01:26 INFO TaskSetManager: Finished task 2.0 in stage 8.0 (TID 13) in 815 ms on localhost (executor 1) (3/4)
+25/03/20 13:01:27 INFO BlockManagerInfo: Added rdd_35_3 in memory on localhost:41017 (size: 14.4 MiB, free: 2.2 GiB)
+25/03/20 13:01:27 INFO TaskSetManager: Finished task 3.0 in stage 8.0 (TID 14) in 863 ms on localhost (executor 1) (4/4)
+25/03/20 13:01:27 INFO YarnScheduler: Removed TaskSet 8.0, whose tasks have all completed, from pool 
+25/03/20 13:01:27 INFO DAGScheduler: ResultStage 8 (showString at NativeMethodAccessorImpl.java:0) finished in 2,396 s
+25/03/20 13:01:27 INFO DAGScheduler: Job 7 is finished. Cancelling potential speculative or zombie tasks for this job
+25/03/20 13:01:27 INFO YarnScheduler: Killing all running tasks in stage 8: Stage finished
+25/03/20 13:01:27 INFO CodeGenerator: Code generated in 9.481297 ms
+25/03/20 13:01:27 INFO HashAggregateExec: spark.sql.codegen.aggregate.map.twolevel.enabled is set to true, but current version of codegened fast hashmap does not support this aggregate.
+25/03/20 13:01:27 INFO CodeGenerator: Code generated in 54.012404 ms
+25/03/20 13:01:27 INFO SparkContext: Starting job: showString at NativeMethodAccessorImpl.java:0
+25/03/20 13:01:27 INFO DAGScheduler: Got job 8 (showString at NativeMethodAccessorImpl.java:0) with 4 output partitions
+25/03/20 13:01:27 INFO DAGScheduler: Final stage: ResultStage 10 (showString at NativeMethodAccessorImpl.java:0)
+25/03/20 13:01:27 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 9)
+25/03/20 13:01:27 INFO DAGScheduler: Missing parents: List()
+25/03/20 13:01:27 INFO DAGScheduler: Submitting ResultStage 10 (MapPartitionsRDD[41] at showString at NativeMethodAccessorImpl.java:0), which has no missing parents
+25/03/20 13:01:27 INFO MemoryStore: Block broadcast_15 stored as values in memory (estimated size 51.5 KiB, free 433.0 MiB)
+25/03/20 13:01:27 INFO MemoryStore: Block broadcast_15_piece0 stored as bytes in memory (estimated size 21.7 KiB, free 433.0 MiB)
+25/03/20 13:01:27 INFO BlockManagerInfo: Added broadcast_15_piece0 in memory on openroam-prg-gm-1-131-111.net.univ-paris-diderot.fr:37575 (size: 21.7 KiB, free: 434.2 MiB)
+25/03/20 13:01:27 INFO SparkContext: Created broadcast 15 from broadcast at DAGScheduler.scala:1585
+25/03/20 13:01:27 INFO DAGScheduler: Submitting 4 missing tasks from ResultStage 10 (MapPartitionsRDD[41] at showString at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0, 1, 2, 3))
+25/03/20 13:01:27 INFO YarnScheduler: Adding task set 10.0 with 4 tasks resource profile 0
+25/03/20 13:01:27 INFO TaskSetManager: Starting task 0.0 in stage 10.0 (TID 15) (localhost, executor 1, partition 0, PROCESS_LOCAL, 9010 bytes) 
+25/03/20 13:01:27 INFO TaskSetManager: Starting task 1.0 in stage 10.0 (TID 16) (localhost, executor 1, partition 1, PROCESS_LOCAL, 9010 bytes) 
+25/03/20 13:01:27 INFO BlockManagerInfo: Added broadcast_15_piece0 in memory on localhost:41017 (size: 21.7 KiB, free: 2.2 GiB)
+25/03/20 13:01:27 INFO TaskSetManager: Starting task 2.0 in stage 10.0 (TID 17) (localhost, executor 1, partition 2, PROCESS_LOCAL, 9010 bytes) 
+25/03/20 13:01:27 INFO TaskSetManager: Starting task 3.0 in stage 10.0 (TID 18) (localhost, executor 1, partition 3, PROCESS_LOCAL, 9010 bytes) 
+25/03/20 13:01:27 INFO TaskSetManager: Finished task 0.0 in stage 10.0 (TID 15) in 493 ms on localhost (executor 1) (1/4)
+25/03/20 13:01:27 INFO TaskSetManager: Finished task 1.0 in stage 10.0 (TID 16) in 495 ms on localhost (executor 1) (2/4)
+25/03/20 13:01:27 INFO TaskSetManager: Finished task 2.0 in stage 10.0 (TID 17) in 109 ms on localhost (executor 1) (3/4)
+25/03/20 13:01:27 INFO TaskSetManager: Finished task 3.0 in stage 10.0 (TID 18) in 112 ms on localhost (executor 1) (4/4)
+25/03/20 13:01:27 INFO YarnScheduler: Removed TaskSet 10.0, whose tasks have all completed, from pool 
+25/03/20 13:01:27 INFO DAGScheduler: ResultStage 10 (showString at NativeMethodAccessorImpl.java:0) finished in 0,612 s
+25/03/20 13:01:27 INFO DAGScheduler: Job 8 is finished. Cancelling potential speculative or zombie tasks for this job
+25/03/20 13:01:27 INFO YarnScheduler: Killing all running tasks in stage 10: Stage finished
+25/03/20 13:01:27 INFO DAGScheduler: Job 8 finished: showString at NativeMethodAccessorImpl.java:0, took 0,617501 s
+25/03/20 13:01:27 INFO CodeGenerator: Code generated in 8.248594 ms
+25/03/20 13:01:27 INFO CodeGenerator: Code generated in 11.799994 ms
++---------+----------+
+|player_id|sum(goals)|
++---------+----------+
+|    38253|       498|
+|    28003|       451|
+|     8198|       432|
+|   132098|       340|
+|    58864|       294|
+|    44352|       289|
+|   148455|       286|
+|   105521|       266|
+|    96341|       265|
+|   342229|       263|
++---------+----------+
+
+Temps d'exécution Requête 1 (YARN) :  6.247032165527344  secondes
+Fin Requête 1
+Début Requête 2
+25/03/20 13:01:32 INFO MemoryStore: Block broadcast_16 stored as values in memory (estimated size 201.5 KiB, free 432.8 MiB)
+25/03/20 13:01:32 INFO MemoryStore: Block broadcast_16_piece0 stored as bytes in memory (estimated size 35.0 KiB, free 432.8 MiB)
+25/03/20 13:01:32 INFO BlockManagerInfo: Added broadcast_16_piece0 in memory on openroam-prg-gm-1-131-111.net.univ-paris-diderot.fr:37575 (size: 35.0 KiB, free: 434.1 MiB)
+25/03/20 13:01:32 INFO SparkContext: Created broadcast 16 from showString at NativeMethodAccessorImpl.java:0
+25/03/20 13:01:32 INFO FileSourceScanExec: Planning scan with bin packing, max size: 10354586 bytes, open cost is considered as scanning 4194304 bytes.
+25/03/20 13:01:32 INFO DAGScheduler: Registering RDD 44 (showString at NativeMethodAccessorImpl.java:0) as input to shuffle 1
+25/03/20 13:01:32 INFO DAGScheduler: Got map stage job 9 (showString at NativeMethodAccessorImpl.java:0) with 2 output partitions
+25/03/20 13:01:32 INFO DAGScheduler: Final stage: ShuffleMapStage 11 (showString at NativeMethodAccessorImpl.java:0)
+25/03/20 13:01:32 INFO DAGScheduler: Parents of final stage: List()
+25/03/20 13:01:32 INFO DAGScheduler: Missing parents: List()
+25/03/20 13:01:32 INFO DAGScheduler: Submitting ShuffleMapStage 11 (MapPartitionsRDD[44] at showString at NativeMethodAccessorImpl.java:0), which has no missing parents
+25/03/20 13:01:32 INFO MemoryStore: Block broadcast_17 stored as values in memory (estimated size 14.8 KiB, free 432.8 MiB)
+25/03/20 13:01:33 INFO MemoryStore: Block broadcast_17_piece0 stored as bytes in memory (estimated size 7.6 KiB, free 432.8 MiB)
+25/03/20 13:01:33 INFO BlockManagerInfo: Added broadcast_17_piece0 in memory on openroam-prg-gm-1-131-111.net.univ-paris-diderot.fr:37575 (size: 7.6 KiB, free: 434.1 MiB)
+25/03/20 13:01:33 INFO BlockManagerInfo: Removed broadcast_8_piece0 on openroam-prg-gm-1-131-111.net.univ-paris-diderot.fr:37575 in memory (size: 35.1 KiB, free: 434.1 MiB)
+25/03/20 13:01:33 INFO SparkContext: Created broadcast 17 from broadcast at DAGScheduler.scala:1585
+25/03/20 13:01:33 INFO DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 11 (MapPartitionsRDD[44] at showString at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0, 1))
+25/03/20 13:01:33 INFO YarnScheduler: Adding task set 11.0 with 2 tasks resource profile 0
+25/03/20 13:01:33 INFO TaskSetManager: Starting task 0.0 in stage 11.0 (TID 19) (localhost, executor 1, partition 0, PROCESS_LOCAL, 9625 bytes) 
+25/03/20 13:01:33 INFO BlockManagerInfo: Removed broadcast_8_piece0 on localhost:41017 in memory (size: 35.1 KiB, free: 2.2 GiB)
+25/03/20 13:01:33 INFO TaskSetManager: Starting task 1.0 in stage 11.0 (TID 20) (localhost, executor 1, partition 1, PROCESS_LOCAL, 9625 bytes) 
+25/03/20 13:01:33 INFO BlockManagerInfo: Removed broadcast_14_piece0 on openroam-prg-gm-1-131-111.net.univ-paris-diderot.fr:37575 in memory (size: 6.3 KiB, free: 434.2 MiB)
+25/03/20 13:01:33 INFO BlockManagerInfo: Removed broadcast_14_piece0 on localhost:41017 in memory (size: 6.3 KiB, free: 2.2 GiB)
+25/03/20 13:01:33 INFO BlockManagerInfo: Added broadcast_17_piece0 in memory on localhost:41017 (size: 7.6 KiB, free: 2.2 GiB)
+25/03/20 13:01:33 INFO BlockManagerInfo: Removed broadcast_6_piece0 on openroam-prg-gm-1-131-111.net.univ-paris-diderot.fr:37575 in memory (size: 35.1 KiB, free: 434.2 MiB)
+25/03/20 13:01:33 INFO BlockManagerInfo: Removed broadcast_6_piece0 on localhost:41017 in memory (size: 35.1 KiB, free: 2.2 GiB)
+25/03/20 13:01:33 INFO BlockManagerInfo: Removed broadcast_15_piece0 on openroam-prg-gm-1-131-111.net.univ-paris-diderot.fr:37575 in memory (size: 21.7 KiB, free: 434.2 MiB)
+25/03/20 13:01:33 INFO BlockManagerInfo: Removed broadcast_15_piece0 on localhost:41017 in memory (size: 21.7 KiB, free: 2.2 GiB)
+25/03/20 13:01:33 INFO BlockManagerInfo: Added broadcast_16_piece0 in memory on localhost:41017 (size: 35.0 KiB, free: 2.2 GiB)
+25/03/20 13:01:33 INFO BlockManagerInfo: Removed broadcast_10_piece0 on openroam-prg-gm-1-131-111.net.univ-paris-diderot.fr:37575 in memory (size: 35.1 KiB, free: 434.2 MiB)
+25/03/20 13:01:33 INFO BlockManagerInfo: Removed broadcast_10_piece0 on localhost:41017 in memory (size: 35.1 KiB, free: 2.2 GiB)
+25/03/20 13:01:33 INFO BlockManagerInfo: Removed broadcast_11_piece0 on openroam-prg-gm-1-131-111.net.univ-paris-diderot.fr:37575 in memory (size: 13.2 KiB, free: 434.3 MiB)
+25/03/20 13:01:33 INFO BlockManagerInfo: Removed broadcast_11_piece0 on localhost:41017 in memory (size: 13.2 KiB, free: 2.2 GiB)
+25/03/20 13:01:33 INFO BlockManagerInfo: Removed broadcast_9_piece0 on openroam-prg-gm-1-131-111.net.univ-paris-diderot.fr:37575 in memory (size: 6.4 KiB, free: 434.3 MiB)
+25/03/20 13:01:33 INFO BlockManagerInfo: Removed broadcast_9_piece0 on localhost:41017 in memory (size: 6.4 KiB, free: 2.2 GiB)
+25/03/20 13:01:33 INFO BlockManagerInfo: Removed broadcast_4_piece0 on openroam-prg-gm-1-131-111.net.univ-paris-diderot.fr:37575 in memory (size: 35.1 KiB, free: 434.3 MiB)
+25/03/20 13:01:33 INFO BlockManagerInfo: Removed broadcast_4_piece0 on localhost:41017 in memory (size: 35.1 KiB, free: 2.2 GiB)
+25/03/20 13:01:33 INFO BlockManagerInfo: Removed broadcast_7_piece0 on openroam-prg-gm-1-131-111.net.univ-paris-diderot.fr:37575 in memory (size: 13.1 KiB, free: 434.3 MiB)
+25/03/20 13:01:33 INFO BlockManagerInfo: Removed broadcast_7_piece0 on localhost:41017 in memory (size: 13.1 KiB, free: 2.2 GiB)
+25/03/20 13:01:33 INFO BlockManagerInfo: Removed broadcast_5_piece0 on openroam-prg-gm-1-131-111.net.univ-paris-diderot.fr:37575 in memory (size: 6.4 KiB, free: 434.3 MiB)
+25/03/20 13:01:33 INFO BlockManagerInfo: Removed broadcast_5_piece0 on localhost:41017 in memory (size: 6.4 KiB, free: 2.2 GiB)
+25/03/20 13:01:33 INFO BlockManagerInfo: Removed broadcast_13_piece0 on openroam-prg-gm-1-131-111.net.univ-paris-diderot.fr:37575 in memory (size: 8.0 KiB, free: 434.3 MiB)
+25/03/20 13:01:33 INFO BlockManagerInfo: Removed broadcast_13_piece0 on localhost:41017 in memory (size: 8.0 KiB, free: 2.2 GiB)
+25/03/20 13:01:33 INFO TaskSetManager: Finished task 1.0 in stage 11.0 (TID 20) in 564 ms on localhost (executor 1) (1/2)
+25/03/20 13:01:33 INFO TaskSetManager: Finished task 0.0 in stage 11.0 (TID 19) in 742 ms on localhost (executor 1) (2/2)
+25/03/20 13:01:33 INFO YarnScheduler: Removed TaskSet 11.0, whose tasks have all completed, from pool 
+25/03/20 13:01:33 INFO DAGScheduler: ShuffleMapStage 11 (showString at NativeMethodAccessorImpl.java:0) finished in 0,763 s
+25/03/20 13:01:33 INFO DAGScheduler: looking for newly runnable stages
+25/03/20 13:01:33 INFO DAGScheduler: running: Set()
+25/03/20 13:01:33 INFO DAGScheduler: waiting: Set()
+25/03/20 13:01:33 INFO DAGScheduler: failed: Set()
+25/03/20 13:01:33 INFO DAGScheduler: Got job 10 (showString at NativeMethodAccessorImpl.java:0) with 4 output partitions
+25/03/20 13:01:33 INFO DAGScheduler: Final stage: ResultStage 13 (showString at NativeMethodAccessorImpl.java:0)
+25/03/20 13:01:33 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 12)
+25/03/20 13:01:33 INFO DAGScheduler: Missing parents: List()
+25/03/20 13:01:33 INFO DAGScheduler: Submitting ResultStage 13 (AdaptiveSparkPlan isFinalPlan=false
++- Exchange hashpartitioning(player_id#60, 4), REPARTITION_BY_NUM, [plan_id=71]
+   +- FileScan csv [player_id#60,date#61,market_value_in_eur#62,current_club_id#63,player_club_domestic_competition_id#64] Batched: false, DataFilters: [], Format: CSV, Location: InMemoryFileIndex(1 paths)[hdfs://localhost:9000/user/marin/datasets/player_valuations.csv], PartitionFilters: [], PushedFilters: [], ReadSchema: struct<player_id:int,date:date,market_value_in_eur:int,current_club_id:int,player_club_domestic_c...
+ MapPartitionsRDD[47] at showString at NativeMethodAccessorImpl.java:0), which has no missing parents
+25/03/20 13:01:33 INFO MemoryStore: Block broadcast_18 stored as values in memory (estimated size 11.8 KiB, free 433.9 MiB)
+25/03/20 13:01:33 INFO MemoryStore: Block broadcast_18_piece0 stored as bytes in memory (estimated size 6.1 KiB, free 433.9 MiB)
+25/03/20 13:01:33 INFO BlockManagerInfo: Added broadcast_18_piece0 in memory on openroam-prg-gm-1-131-111.net.univ-paris-diderot.fr:37575 (size: 6.1 KiB, free: 434.3 MiB)
+25/03/20 13:01:33 INFO SparkContext: Created broadcast 18 from broadcast at DAGScheduler.scala:1585
+25/03/20 13:01:33 INFO DAGScheduler: Submitting 4 missing tasks from ResultStage 13 (AdaptiveSparkPlan isFinalPlan=false
++- Exchange hashpartitioning(player_id#60, 4), REPARTITION_BY_NUM, [plan_id=71]
+   +- FileScan csv [player_id#60,date#61,market_value_in_eur#62,current_club_id#63,player_club_domestic_competition_id#64] Batched: false, DataFilters: [], Format: CSV, Location: InMemoryFileIndex(1 paths)[hdfs://localhost:9000/user/marin/datasets/player_valuations.csv], PartitionFilters: [], PushedFilters: [], ReadSchema: struct<player_id:int,date:date,market_value_in_eur:int,current_club_id:int,player_club_domestic_c...
+ MapPartitionsRDD[47] at showString at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0, 1, 2, 3))
+25/03/20 13:01:33 INFO YarnScheduler: Adding task set 13.0 with 4 tasks resource profile 0
+25/03/20 13:01:33 INFO TaskSetManager: Starting task 0.0 in stage 13.0 (TID 21) (localhost, executor 1, partition 0, NODE_LOCAL, 9010 bytes) 
+25/03/20 13:01:33 INFO TaskSetManager: Starting task 1.0 in stage 13.0 (TID 22) (localhost, executor 1, partition 1, NODE_LOCAL, 9010 bytes) 
+25/03/20 13:01:33 INFO BlockManagerInfo: Added broadcast_18_piece0 in memory on localhost:41017 (size: 6.1 KiB, free: 2.2 GiB)
+25/03/20 13:01:33 INFO MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 1 to 172.28.131.111:43546
+25/03/20 13:01:33 INFO BlockManagerInfo: Added rdd_47_1 in memory on localhost:41017 (size: 1262.0 KiB, free: 2.2 GiB)
+25/03/20 13:01:33 INFO TaskSetManager: Starting task 2.0 in stage 13.0 (TID 23) (localhost, executor 1, partition 2, NODE_LOCAL, 9010 bytes) 
+25/03/20 13:01:33 INFO TaskSetManager: Finished task 1.0 in stage 13.0 (TID 22) in 119 ms on localhost (executor 1) (1/4)
+25/03/20 13:01:33 INFO BlockManagerInfo: Added rdd_47_0 in memory on localhost:41017 (size: 1260.8 KiB, free: 2.2 GiB)
+25/03/20 13:01:33 INFO TaskSetManager: Starting task 3.0 in stage 13.0 (TID 24) (localhost, executor 1, partition 3, NODE_LOCAL, 9010 bytes) 
+25/03/20 13:01:33 INFO TaskSetManager: Finished task 0.0 in stage 13.0 (TID 21) in 142 ms on localhost (executor 1) (2/4)
+25/03/20 13:01:34 INFO BlockManagerInfo: Added rdd_47_3 in memory on localhost:41017 (size: 1272.5 KiB, free: 2.2 GiB)
+25/03/20 13:01:34 INFO TaskSetManager: Finished task 3.0 in stage 13.0 (TID 24) in 118 ms on localhost (executor 1) (3/4)
+25/03/20 13:01:34 INFO BlockManagerInfo: Added rdd_47_2 in memory on localhost:41017 (size: 1246.0 KiB, free: 2.2 GiB)
+25/03/20 13:01:34 INFO TaskSetManager: Finished task 2.0 in stage 13.0 (TID 23) in 165 ms on localhost (executor 1) (4/4)
+25/03/20 13:01:34 INFO YarnScheduler: Removed TaskSet 13.0, whose tasks have all completed, from pool 
+25/03/20 13:01:34 INFO DAGScheduler: ResultStage 13 (showString at NativeMethodAccessorImpl.java:0) finished in 0,289 s
+25/03/20 13:01:34 INFO DAGScheduler: Job 10 is finished. Cancelling potential speculative or zombie tasks for this job
+25/03/20 13:01:34 INFO YarnScheduler: Killing all running tasks in stage 13: Stage finished
+25/03/20 13:01:34 INFO CodeGenerator: Code generated in 7.955364 ms
+25/03/20 13:01:34 INFO DefaultCachedBatchSerializer: Predicate isnotnull(player_id#60) generates partition filter: ((player_id.count#1063 - player_id.nullCount#1062) > 0)
+25/03/20 13:01:34 INFO DefaultCachedBatchSerializer: Predicate isnotnull(date#61) generates partition filter: ((date.count#1068 - date.nullCount#1067) > 0)
+25/03/20 13:01:34 INFO SparkContext: Starting job: $anonfun$withThreadLocalCaptured$1 at FutureTask.java:264
+25/03/20 13:01:34 INFO DAGScheduler: Got job 11 ($anonfun$withThreadLocalCaptured$1 at FutureTask.java:264) with 4 output partitions
+25/03/20 13:01:34 INFO DAGScheduler: Final stage: ResultStage 15 ($anonfun$withThreadLocalCaptured$1 at FutureTask.java:264)
+25/03/20 13:01:34 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 14)
+25/03/20 13:01:34 INFO DAGScheduler: Missing parents: List()
+25/03/20 13:01:34 INFO DAGScheduler: Submitting ResultStage 15 (MapPartitionsRDD[52] at $anonfun$withThreadLocalCaptured$1 at FutureTask.java:264), which has no missing parents
+25/03/20 13:01:34 INFO MemoryStore: Block broadcast_19 stored as values in memory (estimated size 26.9 KiB, free 433.9 MiB)
+25/03/20 13:01:34 INFO MemoryStore: Block broadcast_19_piece0 stored as bytes in memory (estimated size 12.4 KiB, free 433.9 MiB)
+25/03/20 13:01:34 INFO BlockManagerInfo: Added broadcast_19_piece0 in memory on openroam-prg-gm-1-131-111.net.univ-paris-diderot.fr:37575 (size: 12.4 KiB, free: 434.3 MiB)
+25/03/20 13:01:34 INFO SparkContext: Created broadcast 19 from broadcast at DAGScheduler.scala:1585
+25/03/20 13:01:34 INFO DAGScheduler: Submitting 4 missing tasks from ResultStage 15 (MapPartitionsRDD[52] at $anonfun$withThreadLocalCaptured$1 at FutureTask.java:264) (first 15 tasks are for partitions Vector(0, 1, 2, 3))
+25/03/20 13:01:34 INFO YarnScheduler: Adding task set 15.0 with 4 tasks resource profile 0
+25/03/20 13:01:34 INFO TaskSetManager: Starting task 0.0 in stage 15.0 (TID 25) (localhost, executor 1, partition 0, PROCESS_LOCAL, 9010 bytes) 
+25/03/20 13:01:34 INFO TaskSetManager: Starting task 1.0 in stage 15.0 (TID 26) (localhost, executor 1, partition 1, PROCESS_LOCAL, 9010 bytes) 
+25/03/20 13:01:34 INFO BlockManagerInfo: Added broadcast_19_piece0 in memory on localhost:41017 (size: 12.4 KiB, free: 2.2 GiB)
+25/03/20 13:01:34 INFO BlockManagerInfo: Added taskresult_25 in memory on localhost:41017 (size: 1264.2 KiB, free: 2.2 GiB)
+25/03/20 13:01:34 INFO TaskSetManager: Starting task 2.0 in stage 15.0 (TID 27) (localhost, executor 1, partition 2, PROCESS_LOCAL, 9010 bytes) 
+25/03/20 13:01:34 INFO BlockManagerInfo: Added taskresult_26 in memory on localhost:41017 (size: 1266.8 KiB, free: 2.2 GiB)
+25/03/20 13:01:34 INFO TaskSetManager: Starting task 3.0 in stage 15.0 (TID 28) (localhost, executor 1, partition 3, PROCESS_LOCAL, 9010 bytes) 
+25/03/20 13:01:34 INFO TransportClientFactory: Successfully created connection to localhost/127.0.0.1:41017 after 7 ms (0 ms spent in bootstraps)
+25/03/20 13:01:34 INFO TaskSetManager: Finished task 0.0 in stage 15.0 (TID 25) in 293 ms on localhost (executor 1) (1/4)
+25/03/20 13:01:34 INFO TaskSetManager: Finished task 1.0 in stage 15.0 (TID 26) in 293 ms on localhost (executor 1) (2/4)
+25/03/20 13:01:34 INFO BlockManagerInfo: Removed taskresult_25 on localhost:41017 in memory (size: 1264.2 KiB, free: 2.2 GiB)
+25/03/20 13:01:34 INFO BlockManagerInfo: Removed taskresult_26 on localhost:41017 in memory (size: 1266.8 KiB, free: 2.2 GiB)
+25/03/20 13:01:34 INFO BlockManagerInfo: Added taskresult_27 in memory on localhost:41017 (size: 1251.2 KiB, free: 2.2 GiB)
+25/03/20 13:01:34 INFO BlockManagerInfo: Added taskresult_28 in memory on localhost:41017 (size: 1276.5 KiB, free: 2.2 GiB)
+25/03/20 13:01:34 INFO TaskSetManager: Finished task 2.0 in stage 15.0 (TID 27) in 96 ms on localhost (executor 1) (3/4)
+25/03/20 13:01:34 INFO BlockManagerInfo: Removed taskresult_27 on localhost:41017 in memory (size: 1251.2 KiB, free: 2.2 GiB)
+25/03/20 13:01:34 INFO TaskSetManager: Finished task 3.0 in stage 15.0 (TID 28) in 90 ms on localhost (executor 1) (4/4)
+25/03/20 13:01:34 INFO YarnScheduler: Removed TaskSet 15.0, whose tasks have all completed, from pool 
+25/03/20 13:01:34 INFO DAGScheduler: ResultStage 15 ($anonfun$withThreadLocalCaptured$1 at FutureTask.java:264) finished in 0,343 s
+25/03/20 13:01:34 INFO DAGScheduler: Job 11 is finished. Cancelling potential speculative or zombie tasks for this job
+25/03/20 13:01:34 INFO YarnScheduler: Killing all running tasks in stage 15: Stage finished
+25/03/20 13:01:34 INFO DAGScheduler: Job 11 finished: $anonfun$withThreadLocalCaptured$1 at FutureTask.java:264, took 0,346937 s
+25/03/20 13:01:34 INFO BlockManagerInfo: Removed taskresult_28 on localhost:41017 in memory (size: 1276.5 KiB, free: 2.2 GiB)
+25/03/20 13:01:34 INFO CodeGenerator: Code generated in 5.74883 ms
+25/03/20 13:01:34 INFO BlockManagerInfo: Removed broadcast_17_piece0 on openroam-prg-gm-1-131-111.net.univ-paris-diderot.fr:37575 in memory (size: 7.6 KiB, free: 434.3 MiB)
+25/03/20 13:01:34 INFO BlockManagerInfo: Removed broadcast_17_piece0 on localhost:41017 in memory (size: 7.6 KiB, free: 2.2 GiB)
+25/03/20 13:01:34 INFO BlockManagerInfo: Removed broadcast_18_piece0 on openroam-prg-gm-1-131-111.net.univ-paris-diderot.fr:37575 in memory (size: 6.1 KiB, free: 434.3 MiB)
+25/03/20 13:01:34 INFO BlockManagerInfo: Removed broadcast_18_piece0 on localhost:41017 in memory (size: 6.1 KiB, free: 2.2 GiB)
+25/03/20 13:01:34 INFO BlockManagerInfo: Removed broadcast_19_piece0 on openroam-prg-gm-1-131-111.net.univ-paris-diderot.fr:37575 in memory (size: 12.4 KiB, free: 434.3 MiB)
+25/03/20 13:01:34 INFO BlockManagerInfo: Removed broadcast_19_piece0 on localhost:41017 in memory (size: 12.4 KiB, free: 2.2 GiB)
+25/03/20 13:01:34 INFO MemoryStore: Block broadcast_20_piece0 stored as bytes in memory (estimated size 4.0 MiB, free 429.9 MiB)
+25/03/20 13:01:34 INFO BlockManagerInfo: Added broadcast_20_piece0 in memory on openroam-prg-gm-1-131-111.net.univ-paris-diderot.fr:37575 (size: 4.0 MiB, free: 430.3 MiB)
+25/03/20 13:01:34 INFO MemoryStore: Block broadcast_20_piece1 stored as bytes in memory (estimated size 2.9 MiB, free 427.1 MiB)
+25/03/20 13:01:34 INFO BlockManagerInfo: Added broadcast_20_piece1 in memory on openroam-prg-gm-1-131-111.net.univ-paris-diderot.fr:37575 (size: 2.9 MiB, free: 427.5 MiB)
+25/03/20 13:01:34 INFO SparkContext: Created broadcast 20 from $anonfun$withThreadLocalCaptured$1 at FutureTask.java:264
+25/03/20 13:01:34 INFO CodeGenerator: Code generated in 13.832478 ms
+25/03/20 13:01:34 INFO DefaultCachedBatchSerializer: Predicate isnotnull(player_id#19) generates partition filter: ((player_id.count#1098 - player_id.nullCount#1097) > 0)
+25/03/20 13:01:34 INFO DefaultCachedBatchSerializer: Predicate isnotnull(date#22) generates partition filter: ((date.count#1113 - date.nullCount#1112) > 0)
+25/03/20 13:01:34 INFO SparkContext: Starting job: showString at NativeMethodAccessorImpl.java:0
+25/03/20 13:01:34 INFO DAGScheduler: Got job 12 (showString at NativeMethodAccessorImpl.java:0) with 1 output partitions
+25/03/20 13:01:34 INFO DAGScheduler: Final stage: ResultStage 17 (showString at NativeMethodAccessorImpl.java:0)
+25/03/20 13:01:34 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 16)
+25/03/20 13:01:34 INFO DAGScheduler: Missing parents: List()
+25/03/20 13:01:34 INFO DAGScheduler: Submitting ResultStage 17 (MapPartitionsRDD[57] at showString at NativeMethodAccessorImpl.java:0), which has no missing parents
+25/03/20 13:01:35 INFO MemoryStore: Block broadcast_21 stored as values in memory (estimated size 30.3 KiB, free 427.1 MiB)
+25/03/20 13:01:35 INFO MemoryStore: Block broadcast_21_piece0 stored as bytes in memory (estimated size 13.6 KiB, free 427.0 MiB)
+25/03/20 13:01:35 INFO BlockManagerInfo: Added broadcast_21_piece0 in memory on openroam-prg-gm-1-131-111.net.univ-paris-diderot.fr:37575 (size: 13.6 KiB, free: 427.5 MiB)
+25/03/20 13:01:35 INFO SparkContext: Created broadcast 21 from broadcast at DAGScheduler.scala:1585
+25/03/20 13:01:35 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 17 (MapPartitionsRDD[57] at showString at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+25/03/20 13:01:35 INFO YarnScheduler: Adding task set 17.0 with 1 tasks resource profile 0
+25/03/20 13:01:35 INFO TaskSetManager: Starting task 0.0 in stage 17.0 (TID 29) (localhost, executor 1, partition 0, PROCESS_LOCAL, 9010 bytes) 
+25/03/20 13:01:35 INFO BlockManagerInfo: Added broadcast_21_piece0 in memory on localhost:41017 (size: 13.6 KiB, free: 2.2 GiB)
+25/03/20 13:01:35 INFO BlockManagerInfo: Added broadcast_20_piece0 in memory on localhost:41017 (size: 4.0 MiB, free: 2.2 GiB)
+25/03/20 13:01:35 INFO BlockManagerInfo: Added broadcast_20_piece1 in memory on localhost:41017 (size: 2.9 MiB, free: 2.2 GiB)
+25/03/20 13:01:35 INFO TaskSetManager: Finished task 0.0 in stage 17.0 (TID 29) in 366 ms on localhost (executor 1) (1/1)
+25/03/20 13:01:35 INFO YarnScheduler: Removed TaskSet 17.0, whose tasks have all completed, from pool 
+25/03/20 13:01:35 INFO DAGScheduler: ResultStage 17 (showString at NativeMethodAccessorImpl.java:0) finished in 0,389 s
+25/03/20 13:01:35 INFO DAGScheduler: Job 12 is finished. Cancelling potential speculative or zombie tasks for this job
+25/03/20 13:01:35 INFO YarnScheduler: Killing all running tasks in stage 17: Stage finished
+25/03/20 13:01:35 INFO DAGScheduler: Job 12 finished: showString at NativeMethodAccessorImpl.java:0, took 0,393281 s
+25/03/20 13:01:35 INFO CodeGenerator: Code generated in 9.29595 ms
++---------+-------+-------------------+
+|player_id|game_id|market_value_in_eur|
++---------+-------+-------------------+
+|   155395|2244380|            1500000|
+|   188853|2244380|            1500000|
+|    25316|2244380|            4000000|
+|    44860|2244380|            1500000|
+|    45882|2244380|            1500000|
+|    27470|2254954|            9000000|
+|    73912|2262152|            2500000|
+|    40660|2262204|           14500000|
+|    98502|2240069|             500000|
+|   236549|2240071|             700000|
++---------+-------+-------------------+
+only showing top 10 rows
+
+Temps d'exécution Requête 2 (YARN) :  2.560824155807495  secondes
+Fin Requête 2
+Début Requête 3
+25/03/20 13:01:40 INFO MemoryStore: Block broadcast_22 stored as values in memory (estimated size 201.5 KiB, free 426.8 MiB)
+25/03/20 13:01:40 INFO MemoryStore: Block broadcast_22_piece0 stored as bytes in memory (estimated size 35.0 KiB, free 426.8 MiB)
+25/03/20 13:01:40 INFO BlockManagerInfo: Added broadcast_22_piece0 in memory on openroam-prg-gm-1-131-111.net.univ-paris-diderot.fr:37575 (size: 35.0 KiB, free: 427.4 MiB)
+25/03/20 13:01:40 INFO SparkContext: Created broadcast 22 from showString at NativeMethodAccessorImpl.java:0
+25/03/20 13:01:40 INFO FileSourceScanExec: Planning scan with bin packing, max size: 12725230 bytes, open cost is considered as scanning 4194304 bytes.
+25/03/20 13:01:40 INFO DAGScheduler: Registering RDD 60 (showString at NativeMethodAccessorImpl.java:0) as input to shuffle 2
+25/03/20 13:01:40 INFO DAGScheduler: Got map stage job 13 (showString at NativeMethodAccessorImpl.java:0) with 2 output partitions
+25/03/20 13:01:40 INFO DAGScheduler: Final stage: ShuffleMapStage 18 (showString at NativeMethodAccessorImpl.java:0)
+25/03/20 13:01:40 INFO DAGScheduler: Parents of final stage: List()
+25/03/20 13:01:40 INFO DAGScheduler: Missing parents: List()
+25/03/20 13:01:40 INFO DAGScheduler: Submitting ShuffleMapStage 18 (MapPartitionsRDD[60] at showString at NativeMethodAccessorImpl.java:0), which has no missing parents
+25/03/20 13:01:40 INFO MemoryStore: Block broadcast_23 stored as values in memory (estimated size 17.9 KiB, free 426.8 MiB)
+25/03/20 13:01:40 INFO MemoryStore: Block broadcast_23_piece0 stored as bytes in memory (estimated size 8.6 KiB, free 426.8 MiB)
+25/03/20 13:01:40 INFO BlockManagerInfo: Added broadcast_23_piece0 in memory on openroam-prg-gm-1-131-111.net.univ-paris-diderot.fr:37575 (size: 8.6 KiB, free: 427.4 MiB)
+25/03/20 13:01:40 INFO SparkContext: Created broadcast 23 from broadcast at DAGScheduler.scala:1585
+25/03/20 13:01:40 INFO DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 18 (MapPartitionsRDD[60] at showString at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0, 1))
+25/03/20 13:01:40 INFO YarnScheduler: Adding task set 18.0 with 2 tasks resource profile 0
+25/03/20 13:01:40 INFO TaskSetManager: Starting task 0.0 in stage 18.0 (TID 30) (localhost, executor 1, partition 0, PROCESS_LOCAL, 9613 bytes) 
+25/03/20 13:01:40 INFO TaskSetManager: Starting task 1.0 in stage 18.0 (TID 31) (localhost, executor 1, partition 1, PROCESS_LOCAL, 9613 bytes) 
+25/03/20 13:01:40 INFO BlockManagerInfo: Added broadcast_23_piece0 in memory on localhost:41017 (size: 8.6 KiB, free: 2.2 GiB)
+25/03/20 13:01:40 INFO BlockManagerInfo: Added broadcast_22_piece0 in memory on localhost:41017 (size: 35.0 KiB, free: 2.2 GiB)
+25/03/20 13:01:40 INFO TaskSetManager: Finished task 1.0 in stage 18.0 (TID 31) in 439 ms on localhost (executor 1) (1/2)
+25/03/20 13:01:41 INFO TaskSetManager: Finished task 0.0 in stage 18.0 (TID 30) in 535 ms on localhost (executor 1) (2/2)
+25/03/20 13:01:41 INFO YarnScheduler: Removed TaskSet 18.0, whose tasks have all completed, from pool 
+25/03/20 13:01:41 INFO DAGScheduler: ShuffleMapStage 18 (showString at NativeMethodAccessorImpl.java:0) finished in 0,539 s
+25/03/20 13:01:41 INFO DAGScheduler: looking for newly runnable stages
+25/03/20 13:01:41 INFO DAGScheduler: running: Set()
+25/03/20 13:01:41 INFO DAGScheduler: waiting: Set()
+25/03/20 13:01:41 INFO DAGScheduler: failed: Set()
+25/03/20 13:01:41 INFO DAGScheduler: Got job 14 (showString at NativeMethodAccessorImpl.java:0) with 4 output partitions
+25/03/20 13:01:41 INFO DAGScheduler: Final stage: ResultStage 20 (showString at NativeMethodAccessorImpl.java:0)
+25/03/20 13:01:41 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 19)
+25/03/20 13:01:41 INFO DAGScheduler: Missing parents: List()
+25/03/20 13:01:41 INFO DAGScheduler: Submitting ResultStage 20 (AdaptiveSparkPlan isFinalPlan=false
++- Exchange hashpartitioning(game_id#87, 4), REPARTITION_BY_NUM, [plan_id=79]
+   +- FileScan csv [game_id#87,competition_id#88,season#89,round#90,date#91,home_club_id#92,away_club_id#93,home_club_goals#94,away_club_goals#95,home_club_position#96,away_club_position#97,home_club_manager_name#98,away_club_manager_name#99,stadium#100,attendance#101,referee#102,url#103,home_club_formation#104,away_club_formation#105,home_club_name#106,away_club_name#107,aggregate#108,competition_type#109] Batched: false, DataFilters: [], Format: CSV, Location: InMemoryFileIndex(1 paths)[hdfs://localhost:9000/user/marin/datasets/games.csv], PartitionFilters: [], PushedFilters: [], ReadSchema: struct<game_id:int,competition_id:string,season:int,round:string,date:date,home_club_id:int,away_...
+ MapPartitionsRDD[63] at showString at NativeMethodAccessorImpl.java:0), which has no missing parents
+25/03/20 13:01:41 INFO MemoryStore: Block broadcast_24 stored as values in memory (estimated size 13.2 KiB, free 426.8 MiB)
+25/03/20 13:01:41 INFO MemoryStore: Block broadcast_24_piece0 stored as bytes in memory (estimated size 6.5 KiB, free 426.8 MiB)
+25/03/20 13:01:41 INFO BlockManagerInfo: Added broadcast_24_piece0 in memory on openroam-prg-gm-1-131-111.net.univ-paris-diderot.fr:37575 (size: 6.5 KiB, free: 427.4 MiB)
+25/03/20 13:01:41 INFO SparkContext: Created broadcast 24 from broadcast at DAGScheduler.scala:1585
+25/03/20 13:01:41 INFO DAGScheduler: Submitting 4 missing tasks from ResultStage 20 (AdaptiveSparkPlan isFinalPlan=false
++- Exchange hashpartitioning(game_id#87, 4), REPARTITION_BY_NUM, [plan_id=79]
+   +- FileScan csv [game_id#87,competition_id#88,season#89,round#90,date#91,home_club_id#92,away_club_id#93,home_club_goals#94,away_club_goals#95,home_club_position#96,away_club_position#97,home_club_manager_name#98,away_club_manager_name#99,stadium#100,attendance#101,referee#102,url#103,home_club_formation#104,away_club_formation#105,home_club_name#106,away_club_name#107,aggregate#108,competition_type#109] Batched: false, DataFilters: [], Format: CSV, Location: InMemoryFileIndex(1 paths)[hdfs://localhost:9000/user/marin/datasets/games.csv], PartitionFilters: [], PushedFilters: [], ReadSchema: struct<game_id:int,competition_id:string,season:int,round:string,date:date,home_club_id:int,away_...
+ MapPartitionsRDD[63] at showString at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0, 1, 2, 3))
+25/03/20 13:01:41 INFO YarnScheduler: Adding task set 20.0 with 4 tasks resource profile 0
+25/03/20 13:01:41 INFO TaskSetManager: Starting task 0.0 in stage 20.0 (TID 32) (localhost, executor 1, partition 0, NODE_LOCAL, 9010 bytes) 
+25/03/20 13:01:41 INFO TaskSetManager: Starting task 1.0 in stage 20.0 (TID 33) (localhost, executor 1, partition 1, NODE_LOCAL, 9010 bytes) 
+25/03/20 13:01:41 INFO BlockManagerInfo: Added broadcast_24_piece0 in memory on localhost:41017 (size: 6.5 KiB, free: 2.2 GiB)
+25/03/20 13:01:41 INFO MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 2 to 172.28.131.111:43546
+25/03/20 13:01:41 INFO BlockManagerInfo: Added rdd_63_0 in memory on localhost:41017 (size: 2.6 MiB, free: 2.2 GiB)
+25/03/20 13:01:41 INFO TaskSetManager: Starting task 2.0 in stage 20.0 (TID 34) (localhost, executor 1, partition 2, NODE_LOCAL, 9010 bytes) 
+25/03/20 13:01:41 INFO TaskSetManager: Finished task 0.0 in stage 20.0 (TID 32) in 474 ms on localhost (executor 1) (1/4)
+25/03/20 13:01:41 INFO BlockManagerInfo: Added rdd_63_1 in memory on localhost:41017 (size: 2.6 MiB, free: 2.2 GiB)
+25/03/20 13:01:41 INFO TaskSetManager: Starting task 3.0 in stage 20.0 (TID 35) (localhost, executor 1, partition 3, NODE_LOCAL, 9010 bytes) 
+25/03/20 13:01:41 INFO TaskSetManager: Finished task 1.0 in stage 20.0 (TID 33) in 484 ms on localhost (executor 1) (2/4)
+25/03/20 13:01:41 INFO BlockManagerInfo: Added rdd_63_3 in memory on localhost:41017 (size: 2.7 MiB, free: 2.2 GiB)
+25/03/20 13:01:41 INFO TaskSetManager: Finished task 3.0 in stage 20.0 (TID 35) in 274 ms on localhost (executor 1) (3/4)
+25/03/20 13:01:41 INFO BlockManagerInfo: Added rdd_63_2 in memory on localhost:41017 (size: 2.6 MiB, free: 2.1 GiB)
+25/03/20 13:01:41 INFO TaskSetManager: Finished task 2.0 in stage 20.0 (TID 34) in 344 ms on localhost (executor 1) (4/4)
+25/03/20 13:01:41 INFO YarnScheduler: Removed TaskSet 20.0, whose tasks have all completed, from pool 
+25/03/20 13:01:41 INFO DAGScheduler: ResultStage 20 (showString at NativeMethodAccessorImpl.java:0) finished in 0,822 s
+25/03/20 13:01:41 INFO DAGScheduler: Job 14 is finished. Cancelling potential speculative or zombie tasks for this job
+25/03/20 13:01:41 INFO YarnScheduler: Killing all running tasks in stage 20: Stage finished
+25/03/20 13:01:41 INFO CodeGenerator: Code generated in 25.956636 ms
+25/03/20 13:01:41 INFO DefaultCachedBatchSerializer: Predicate isnotnull(date#91) generates partition filter: ((date.count#1634 - date.nullCount#1633) > 0)
+25/03/20 13:01:41 INFO DefaultCachedBatchSerializer: Predicate isnotnull(home_club_goals#94) generates partition filter: ((home_club_goals.count#1649 - home_club_goals.nullCount#1648) > 0)
+25/03/20 13:01:41 INFO DefaultCachedBatchSerializer: Predicate isnotnull(away_club_goals#95) generates partition filter: ((away_club_goals.count#1654 - away_club_goals.nullCount#1653) > 0)
+25/03/20 13:01:41 INFO DefaultCachedBatchSerializer: Predicate (date#91 > 2020-01-01) generates partition filter: (2020-01-01 < date.upperBound#1631)
+25/03/20 13:01:41 INFO SparkContext: Starting job: showString at NativeMethodAccessorImpl.java:0
+25/03/20 13:01:41 INFO DAGScheduler: Got job 15 (showString at NativeMethodAccessorImpl.java:0) with 1 output partitions
+25/03/20 13:01:41 INFO DAGScheduler: Final stage: ResultStage 22 (showString at NativeMethodAccessorImpl.java:0)
+25/03/20 13:01:41 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 21)
+25/03/20 13:01:41 INFO DAGScheduler: Missing parents: List()
+25/03/20 13:01:41 INFO DAGScheduler: Submitting ResultStage 22 (MapPartitionsRDD[68] at showString at NativeMethodAccessorImpl.java:0), which has no missing parents
+25/03/20 13:01:41 INFO MemoryStore: Block broadcast_25 stored as values in memory (estimated size 40.6 KiB, free 426.7 MiB)
+25/03/20 13:01:41 INFO MemoryStore: Block broadcast_25_piece0 stored as bytes in memory (estimated size 16.4 KiB, free 426.7 MiB)
+25/03/20 13:01:41 INFO BlockManagerInfo: Added broadcast_25_piece0 in memory on openroam-prg-gm-1-131-111.net.univ-paris-diderot.fr:37575 (size: 16.4 KiB, free: 427.4 MiB)
+25/03/20 13:01:41 INFO SparkContext: Created broadcast 25 from broadcast at DAGScheduler.scala:1585
+25/03/20 13:01:41 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 22 (MapPartitionsRDD[68] at showString at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+25/03/20 13:01:41 INFO YarnScheduler: Adding task set 22.0 with 1 tasks resource profile 0
+25/03/20 13:01:41 INFO TaskSetManager: Starting task 0.0 in stage 22.0 (TID 36) (localhost, executor 1, partition 0, PROCESS_LOCAL, 9010 bytes) 
+25/03/20 13:01:41 INFO BlockManagerInfo: Added broadcast_25_piece0 in memory on localhost:41017 (size: 16.4 KiB, free: 2.1 GiB)
+25/03/20 13:01:42 INFO TaskSetManager: Finished task 0.0 in stage 22.0 (TID 36) in 100 ms on localhost (executor 1) (1/1)
+25/03/20 13:01:42 INFO YarnScheduler: Removed TaskSet 22.0, whose tasks have all completed, from pool 
+25/03/20 13:01:42 INFO DAGScheduler: ResultStage 22 (showString at NativeMethodAccessorImpl.java:0) finished in 0,113 s
+25/03/20 13:01:42 INFO DAGScheduler: Job 15 is finished. Cancelling potential speculative or zombie tasks for this job
+25/03/20 13:01:42 INFO YarnScheduler: Killing all running tasks in stage 22: Stage finished
+25/03/20 13:01:42 INFO DAGScheduler: Job 15 finished: showString at NativeMethodAccessorImpl.java:0, took 0,116679 s
+25/03/20 13:01:42 INFO CodeGenerator: Code generated in 22.599546 ms
++-------+--------------+------+--------------+----------+------------+------------+---------------+---------------+------------------+------------------+----------------------+----------------------+--------------------+----------+--------------------+--------------------+-------------------+-------------------+--------------------+--------------------+-------------------+----------------+
+|game_id|competition_id|season|         round|      date|home_club_id|away_club_id|home_club_goals|away_club_goals|home_club_position|away_club_position|home_club_manager_name|away_club_manager_name|             stadium|attendance|             referee|                 url|home_club_formation|away_club_formation|      home_club_name|      away_club_name|          aggregate|competition_type|
++-------+--------------+------+--------------+----------+------------+------------+---------------+---------------+------------------+------------------+----------------------+----------------------+--------------------+----------+--------------------+--------------------+-------------------+-------------------+--------------------+--------------------+-------------------+----------------+
+|3210098|           ES1|  2019|  33. Matchday|2020-06-30|         237|         940|              5|              1|                18|                17|        Vicente Moreno|          Óscar García|   Mallorca Son Moix|      NULL|De Burgos Bengoetxea|https://www.trans...|            4-4-1-1|            4-1-4-1|Real Club Deporti...|Real Club Celta d...|2025-03-20 05:01:00| domestic_league|
+|3210107|           ES1|  2019|  34. Matchday|2020-07-04|       16795|        1049|              2|              2|                10|                 9|        Diego Martínez|                  Voro|  Nuevo Los Cármenes|      NULL| Adrián Cordero Vega|https://www.trans...|              5-4-1|     4-4-2 double 6|          Granada CF|Valencia Club de ...|2025-03-20 02:02:00| domestic_league|
+|3219201|           GB1|  2019|  33. Matchday|2020-07-05|         762|         379|              2|              2|                12|                16|           Steve Bruce|           David Moyes|      St James' Park|      NULL|        Craig Pawson|https://www.trans...|            4-2-3-1|            4-2-3-1|Newcastle United ...|West Ham United F...|2025-03-20 02:02:00| domestic_league|
+|3223263|           TR1|  2019|  28. Matchday|2020-06-22|         589|         126|              3|              1|                 9|                14|            Tamer Tuna|          Ünal Karaman|Corendon Airlines...|      NULL|     Suat Arslanboğa|https://www.trans...|     4-4-2 double 6|            4-2-3-1|         Antalyaspor|Çaykur Rizespor K...|2025-03-20 03:01:00| domestic_league|
+|3229361|           IT1|  2019|  20. Matchday|2020-01-19|         252|          12|              1|              3|                20|                 4|         Davide Nicola|         Paulo Fonseca|      Luigi Ferraris|     20951|       Fabio Maresca|https://www.trans...|         3-5-2 flat|            4-2-3-1|Genoa Cricket and...|Associazione Spor...|2025-03-20 01:03:00| domestic_league|
+|3264443|          UKR1|  2019|  19. Matchday|2020-02-22|        6993|       10690|              1|              2|                 7|                 3|      Oleksandr Babych|       Viktor Skrypnyk|Stadion im. Volod...|      1570|      Yaroslav Kozyk|https://www.trans...|            4-1-4-1|            4-1-4-1|         FK Mariupol|    FC Zorya Lugansk|2025-03-20 01:02:00| domestic_league|
+|3302951|           BE1|  2019|  28. Matchday|2020-02-29|        1096|        2861|              3|              1|                 4|                15|         László Bölöni|       Dennis van Wijk|           De Bosuil|     11012|            Bert Put|https://www.trans...|            4-2-3-1|            3-4-1-2|Royal Antwerp Foo...|         KV Oostende|2025-03-20 03:01:00| domestic_league|
+|3330510|          UKR1|  2019|  21. Matchday|2020-03-04|       23611|       16239|              1|              2|                10|                 4|         Vicente Gómez|    Oleksandr Ryabokon|Stadion im. Valer...|       320|  Viktor Kopiyevskyi|https://www.trans...|            4-1-4-1|            4-2-3-1|     Olimpik Donetsk|     Desna Chernigiv|2025-03-20 01:02:00| domestic_league|
+|3388674|           FAC|  2019|Quarter-Finals|2020-06-27|        1123|         985|              1|              2|              NULL|              NULL|          Daniel Farke|   Ole Gunnar Solskjær|         Carrow Road|      NULL|       Jonathan Moss|https://www.trans...|            4-1-4-1|            4-2-3-1|        Norwich City|Manchester United...|2025-03-20 01:02:00|    domestic_cup|
+|3394640|           FR1|  2020|   8. Matchday|2020-10-24|         583|        2969|              4|              0|                 1|                20|         Thomas Tuchel|       Stéphane Jobard|    Parc des Princes|      NULL|         Johan Hamel|https://www.trans...|    4-3-3 Attacking|    4-3-3 Attacking|Paris Saint-Germa...|           Dijon FCO|2025-03-20 04:00:00| domestic_league|
++-------+--------------+------+--------------+----------+------------+------------+---------------+---------------+------------------+------------------+----------------------+----------------------+--------------------+----------+--------------------+--------------------+-------------------+-------------------+--------------------+--------------------+-------------------+----------------+
+only showing top 10 rows
+
+Temps d'exécution Requête 3 (YARN) :  1.709463357925415  secondes
+Fin Requête 3
+Partitions appearances_df : 4
+Partitions player_valuations_df : 4
+Partitions games_df : 4
+25/03/20 13:01:47 INFO SparkContext: SparkContext is stopping with exitCode 0.
+25/03/20 13:01:47 INFO SparkUI: Stopped Spark web UI at http://openroam-prg-gm-1-131-111.net.univ-paris-diderot.fr:4040
+25/03/20 13:01:47 INFO YarnClientSchedulerBackend: Interrupting monitor thread
+25/03/20 13:01:47 INFO YarnClientSchedulerBackend: Shutting down all executors
+25/03/20 13:01:47 INFO YarnSchedulerBackend$YarnDriverEndpoint: Asking each executor to shut down
+25/03/20 13:01:47 INFO YarnClientSchedulerBackend: YARN client scheduler backend Stopped
+25/03/20 13:01:47 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+25/03/20 13:01:47 INFO MemoryStore: MemoryStore cleared
+25/03/20 13:01:47 INFO BlockManager: BlockManager stopped
+25/03/20 13:01:47 INFO BlockManagerMaster: BlockManagerMaster stopped
+25/03/20 13:01:47 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+25/03/20 13:01:47 INFO SparkContext: Successfully stopped SparkContext
+25/03/20 13:01:47 INFO ShutdownHookManager: Shutdown hook called
+25/03/20 13:01:47 INFO ShutdownHookManager: Deleting directory /tmp/spark-94be9c0d-8e2c-4b02-988e-ea051b8268f8
+25/03/20 13:01:47 INFO ShutdownHookManager: Deleting directory /tmp/spark-ef9f7568-300f-47e4-8daf-b2cc14115e85
+25/03/20 13:01:47 INFO ShutdownHookManager: Deleting directory /tmp/spark-94be9c0d-8e2c-4b02-988e-ea051b8268f8/pyspark-fa2d34c6-4a01-4080-88a0-b1628198a7e1
