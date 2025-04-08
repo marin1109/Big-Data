@@ -9,9 +9,8 @@ from time import sleep
 spark = SparkSession.builder \
     .appName("YarnTests") \
     .master("yarn") \
-    .config("spark.driver.memory", "8g") \
-    .config("spark.executor.memory", "4g") \
     .getOrCreate()
+
 
 # =============================================================================
 # Chemin HDFS - veillez à ce que ces fichiers soient présents dans HDFS

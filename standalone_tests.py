@@ -8,15 +8,16 @@ from time import sleep
 # =============================================================================
 spark = SparkSession.builder \
     .appName("StandaloneTests") \
-    .master("spark://marin-ZenBook-UX325EA-UX325EA:7077") \
+    .master("local[4]") \
     .config("spark.driver.memory", "8g") \
     .config("spark.executor.memory", "4g") \
+    .config("spark.hadoop.fs.defaultFS", "file:///") \
     .getOrCreate()
 
 # =============================================================================
 # Chemin local (ex. répertoire ./datasets/) - adaptateur pour votre machine
 # =============================================================================
-csv_path = "./datasets/"
+csv_path = "/home/marin/M1/Big-Data/datasets/"
 
 # =============================================================================
 # Chargement des DataFrames
